@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+/*General CSS*/
+html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Gabarito", serif;
+}
+
+.donate_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 8px;
+    padding: 12px 21px;
+    color: #fff;
+    text-decoration: none;
+    background: #F15704;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.donate_btn img{
+    width: 24px;
+}
+
+.knowmore_btn{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 21px;
+    color: #F15704;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2.5px solid #F15704;
+    background: #fff;
+    font-size: 20px;
+}
+
+.knowmore_btn img{
+    color: #F15704;
+}
+
+.nav .donate_btn{
+    margin-right: 40px;
+}
+
+/*Header Section*/
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 32px;
+}
+
+.logo img{
+    width: 110px;
+    height: 100px;
+}
+
+.nav{
+    display: flex;
+}
+
+.nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    gap: 40px;
+}
+
+.nav ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.active{
+    color: #F15704 !important;
+    font-size: 20px !important;
+    text-decoration: underline !important;
+}
+
+.nav ul li a{
+    color:#652502;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.nav ul li a:hover{
+    color: #F15704;
+}
+
+
+/*Main Section*/
+/*Hero Section*/
+
+.hero_sec{
+    width: 100%;
+    height: 905px;
+    background: url(../images/hero_back.jpeg) lightgray -1.108px -2.097px / 100.077% 100.232% no-repeat;
+}
+
+.hero_main{
+    padding-top: 215px;
+    padding-left: 70px;
+}
+
+.hero_text h1{
+    margin: 0;
+    color: #012700;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    max-width: 900px;
+}
+
+.red_text{
+    color: #AB3E03;
+}
+
+.hero_btns{
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+}
+
+.hero_btns .donate_btn{
+    
+}
+
+.hero_btns a{
+    min-width: 130px;
+}
