@@ -51,6 +51,8 @@ body{
     margin-right: 40px;
 }
 
+
+
 h3{
     font-size: 28px;
     font-weight: 500;
@@ -93,6 +95,44 @@ h3{
 .nav ul li{
     display: inline-block;
     list-style: none;
+    position: relative;
+}
+
+.nav_drop ul{
+    display: block;
+}
+
+.nav_drop{
+    top: 100%;
+    position: absolute;
+    border: 1px solid #853002;
+    width: max-content;
+    display: none;
+}
+
+.nav_extend:hover .nav_drop {
+    display: block;
+}
+
+.nav_drop .dropitem{
+    border: 1px solid #652502;
+    background: #FFF;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.nav_drop .dropitem a{
+    color:#853002;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.nav_drop .dropitem a:hover{
+    color:#F15704;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .active{
@@ -295,6 +335,13 @@ h3{
     align-items: center;
     min-height: 226px;
     max-width: 296px;
+    transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out;
+}
+
+.impact_card:hover{
+    transform: translate(-2px, -5px);
+    box-shadow: 2px 4px 8px #ccc;
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
 }
 
 .impact_text{
@@ -327,66 +374,74 @@ h3{
 
 /*Banner Section*/
 
-.banner_bg{
-    background: url(../images/Banner/banner_back.png);
-    background-color: #FFF; 
-    background-size: 100%; 
-    background-repeat: no-repeat; 
-    padding: 60px 0;
+.banner_carousel {
+    overflow: hidden;
     position: relative;
-}
-
-.banner_bg i{
-    position: absolute;
-    
-}
-
-.banner_bg #left{
-    top: 50%;
-    left: 40px;
-}
-
-.banner_bg #right{
-    top: 50%;
-    right: 40px;
-}
-
-.banner_bg #cir1{
-    left: calc(50% - 42px);
-    bottom: 16px;
-}
-
-.banner_bg #cir2{
-    left: calc(50% - 14px);
-    bottom: 16px;
-}
-
-.banner_bg #cir3{
-    left: calc(50% + 14px);
-    bottom: 16px;
-}
-
-.banner_bg #cir4{
-    left: calc(50% + 42px);
-    bottom: 16px;
-}
-
-.banner_bg #left, .banner_bg #right{
-    color: #F15704 ;
-    font-size: 40px;
-}
-
-.banner_bg .fa-circle{
-    color: #F9B28C;
-}
-
-.banner_block{
     width: 100%;
-    align-items: center;
-    justify-content: space-around;
-    display: none;
-    min-height: 200px;
 }
+
+.banner_track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner_block {
+    min-height: 260px;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner_carousel i {
+    position: absolute;
+    cursor: pointer;
+}
+
+.banner_carousel #left {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #F15704;
+    font-size: 48px;
+}
+
+.banner_carousel #right {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 48px;
+    color: #F15704;
+}
+
+.org_circle {
+    position: absolute;
+    bottom: 20px;
+    color: #F9B28C;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#cir1 {
+    left: calc(50% - 42px);
+}
+
+#cir2 {
+    left: calc(50% - 14px);
+}
+
+#cir3 {
+    left: calc(50% + 14px);
+}
+
+#cir4 {
+    left: calc(50% + 42px);
+}
+
+.org_circle.selected {
+    color: #F15704;
+}
+
 
 /*footer*/
 
@@ -527,6 +582,7 @@ h3{
     background-color: transparent;
     width: 100%;
     height: 50px;
+    color: #FFF;
 }
 
 #email::placeholder{
@@ -573,4 +629,37 @@ h3{
     color: #FFF;
     font-size: 13px;
     font-weight: 700;
+}
+
+/* Resposive Screens */
+
+@media screen and (max-width: 1920px){
+    .nav ul li a{
+        font-size: 24px;
+    }
+    .donate_btn,.knowmore_btn{
+        font-size: 26px;
+        padding: 16px 28px;
+    }
+    .hero_text h1{
+        font-size: 62px;
+    }
+    h3{
+        font-size: 34px;
+    }
+    .wel_text, .focus_foot {
+        font-size: 22px;
+    }
+    .focus_main{
+        font-size: 20px;
+    }
+    .focus_text{
+        font-size: 18px;
+    }
+    .focus_card .focus_img img {
+        width: 110px;
+    }
+    .impact_text{
+        font-size: 22px;
+    }
 }

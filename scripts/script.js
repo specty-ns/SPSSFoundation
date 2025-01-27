@@ -1,54 +1,42 @@
-window.onload = function(){
-    var banner_arr = document.getElementsByClassName("banner_block");
-    var right_btn = document.getElementById("right");
-    var left_btn = document.getElementById("left");
-    var org_circle = document.getElementsByClassName("org_circle");
+window.onload = function () {
+    // Selecting the necessary elements
+    const track = document.querySelector('.banner_track');
+    const slides = document.querySelectorAll('.banner_block');
+    const indicators = document.querySelectorAll('.org_circle');
+    const leftBtn = document.getElementById('left');
+    const rightBtn = document.getElementById('right');
 
-    var ban_index=0
+    let currentIndex = 0;
 
+    function updateCarousel() {
+        const offset = -currentIndex * slides[0].offsetWidth;
+        track.style.transform = `translateX(${offset}px)`;
 
-    for (let i = 0; i < org_circle.length; i++) {
-        org_circle[i].addEventListener('click', function() {
-            showbanner(i);
-            ban_index = i;
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('selected', i === currentIndex);
         });
     }
 
-    function showbanner(index){
-        for(var i=0; i<banner_arr.length; i++){
-            
-            if(i === index){
-                banner_arr[i].style.display = "flex";
-                org_circle[i].style.color = "#F15704";
-            }
-            else{
-                banner_arr[i].style.display = "none";
-                org_circle[i].style.color = "#F9B28C";
-            }
-        }
+    function moveNext() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
     }
 
-    showbanner(ban_index);
-
-    left_btn.onclick = function(){
-        if(ban_index - 1 < 0){
-            ban_index = banner_arr.length - 1;
-        }
-        else{
-            ban_index--;
-        }
-        showbanner(ban_index);
+    function movePrev() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
     }
 
-    right_btn.onclick = function(){
-        if(ban_index + 1 >= banner_arr.length){
-            ban_index = 0;
-        }
-        else{
-            ban_index++;
-        }
-        showbanner(ban_index);
-    }
+    indicators.forEach((indicator, i) => {
+        indicator.addEventListener('click', () => {
+            currentIndex = i; 
+            updateCarousel(); 
+        });
+    });
+
+    rightBtn.addEventListener('click', moveNext);
+    leftBtn.addEventListener('click', movePrev);
 
 
-}
+    updateCarousel();
+};
