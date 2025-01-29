@@ -1,42 +1,38 @@
-window.onload = function () {
-    // Selecting the necessary elements
-    const track = document.querySelector('.banner_track');
-    const slides = document.querySelectorAll('.banner_block');
-    const indicators = document.querySelectorAll('.org_circle');
-    const leftBtn = document.getElementById('left');
-    const rightBtn = document.getElementById('right');
+// window.onload = function () {
+//     const track = document.querySelector('.banner_track');
+//     const slides = document.querySelectorAll('.banner_block');
+//     const leftBtn = document.getElementById('left');
+//     const rightBtn = document.getElementById('right');
 
-    let currentIndex = 0;
+//     let currentIndex = 0;
+//     const visibleItems = 3;
+//     const totalSlides = slides.length;
 
-    function updateCarousel() {
-        const offset = -currentIndex * slides[0].offsetWidth;
-        track.style.transform = `translateX(${offset}px)`;
+//     function updateCarousel() {
+//         const offset = -currentIndex * (slides[0].offsetWidth);
+//         track.style.transform = `translateX(${offset}px)`;
+//     }
 
-        indicators.forEach((indicator, i) => {
-            indicator.classList.toggle('selected', i === currentIndex);
-        });
-    }
+//     function moveNext() {
+//         if (currentIndex + visibleItems < totalSlides) {
+//             currentIndex += visibleItems;
+//         } else {
+//             currentIndex = 0;
+//         }
+//         updateCarousel();
+//     }
 
-    function moveNext() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateCarousel();
-    }
+//     function movePrev() {
+//         if (currentIndex - visibleItems >= 0) {
+//             currentIndex -= visibleItems;
+//         } else {
+//             currentIndex = totalSlides - visibleItems;
+//         }
+//         updateCarousel();
+//     }
 
-    function movePrev() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateCarousel();
-    }
+//     rightBtn.addEventListener('click', moveNext);
+//     leftBtn.addEventListener('click', movePrev);
 
-    indicators.forEach((indicator, i) => {
-        indicator.addEventListener('click', () => {
-            currentIndex = i; 
-            updateCarousel(); 
-        });
-    });
-
-    rightBtn.addEventListener('click', moveNext);
-    leftBtn.addEventListener('click', movePrev);
-
-
-    updateCarousel();
-};
+//     setInterval(moveNext, 3000);
+// };
