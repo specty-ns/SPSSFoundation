@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/odometer-theme-default.css">
 </head>
 <body>
     <header>
@@ -13,7 +14,7 @@
             <div class="logo">
                 <img src="./images/logo_main.png" alt="SP Seva Sansthan Foundation" width="100%">
             </div>
-            <nav class="nav">
+            <nav id="nav" class="nav">
                 <ul>
                     <li><a class="nav_link active" href="index.html">Home</a></li>
                     <li class="nav_extend">
@@ -75,6 +76,11 @@
                 </ul>
                 <a href="#" class="donate_btn" ><img src="./images/Donate_svg.svg" alt="Donate button"> Donate</a>
             </nav>
+            <div id="menu_btn" class="menu_btn">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </div>
     </header>
     <main>
@@ -183,6 +189,36 @@
                 </div>
             </div>
         </section>
+        <!-- Counter Section -->
+         <section>
+            <div class="counter_sec">
+                <div class="counter_head">
+                    <h3>Our Achievements</h3>
+                </div>
+                <div class="counter_main">
+                    <div class="counter_card">
+                        <div class="odometer1 count_head">2801</div>
+                        <div class="count_text">Education</div>
+                    </div>
+                    <div class="counter_card">
+                        <div class="odometer2 count_head">25828</div>
+                        <div class="count_text">Health</div>
+                    </div>
+                    <div class="counter_card">
+                        <div class="odometer3 count_head">1811</div>
+                        <div class="count_text">Plantations(Environment)</div>
+                    </div>
+                    <div class="counter_card">
+                        <div class="odometer4 count_head">147</div>
+                        <div class="count_text">Women Empowerment</div>
+                    </div>
+                    <div class="counter_card">
+                        <div class="odometer5 count_head">41007</div>
+                        <div class="count_text">Community Prosperity</div>
+                    </div>
+                </div>
+            </div>
+         </section>
         <!-- impact Section -->
         <section>
             <div class="impact_sec">
@@ -239,19 +275,19 @@
                     <!-- Card 6 -->
                     <div class="impact_card">
                         <div class="impact_img">
-                            <img src="./images/impact/women.jpeg" alt="Women">
+                            <img src="./images/impact/people.jpeg" alt="people">
                         </div>
                         <div class="impact_text">
-                            Impacted 16,358 people by raising awareness, this includes <span class="sp_text">educating 12,485 women on menstruation</span>, counselling <span class="sp_text">1902 children on career front,</span> and empowering <span class="sp_text">368 women on entrepreneurship & employment.</span>
+                            Distributed necessities to <span class="sp_text">10,202 underprivileged people.</span>
                         </div>
                     </div>
                     <!-- Card 7 -->
                     <div class="impact_card">
                         <div class="impact_img">
-                            <img src="./images/impact/people.jpeg" alt="people">
+                            <img src="./images/impact/women.jpeg" alt="Women">
                         </div>
                         <div class="impact_text">
-                            Distributed necessities to <span class="sp_text">10,202 underprivileged people.</span>
+                            Impacted 16,358 people by raising awareness, this includes <span class="sp_text">educating 12,485 women on menstruation</span>, counselling <span class="sp_text">1902 children on career front,</span> and empowering <span class="sp_text">368 women on entrepreneurship & employment.</span>
                         </div>
                     </div>
                 </div>
@@ -301,6 +337,9 @@
 
         <section>
             <div class="banner_sec">
+                <div class="banner_head">
+                    <h3>Our Supporters</h3>
+                </div>
                 <div class="banner_carousel">
                     <div class="banner_track">
                         <!-- Original Logos -->
@@ -410,5 +449,6 @@
         </div>
     </footer>
     <script src="scripts/script.js"></script>
+    <script src="scripts/odometer.min.js"></script>
 </body>
 </html>

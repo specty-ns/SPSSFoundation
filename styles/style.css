@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+/*https://www.flaticon.com/free-icon/money-currency_16195273?term=rupee+bag&page=1&position=10&origin=search&related_id=16195273*/
 /*General CSS*/
 html, body{
     padding: 0;
@@ -22,6 +23,13 @@ body{
     background: #F15704;
     font-weight: 700;
     font-size: 20px;
+    transition: transform 0.2s linear, box-shadow 0.2s linear;
+}
+
+.donate_btn:hover{
+    box-shadow: 2px 2px 2px #000;
+    transform: translateY(-4px);
+    transition: transform 0.2s linear, box-shadow 0.2s linear;
 }
 
 .donate_btn img{
@@ -41,6 +49,13 @@ body{
     text-decoration: none;
     border: 2.5px solid #F15704;
     background: #fff;
+    transition: transform 0.2s linear, box-shadow 0.2s linear;
+}
+
+.knowmore_btn:hover{
+    box-shadow: 2px 2px 2px #000;
+    transform: translateY(-4px);
+    transition: transform 0.2s linear, box-shadow 0.2s linear;
 }
 
 .knowmore_btn img{
@@ -51,7 +66,33 @@ body{
     margin-right: 40px;
 }
 
+.menu_btn{
+    cursor: pointer;
+    border: 1px solid #DB4F04;
+    padding: 7px 12px;
+    z-index: 5;
+    display: none;
+}
 
+.bar1, .bar2, .bar3{
+    width: 30px;
+    height: 2px;
+    background-color: #DB4F04;
+    margin: 6px 0;
+    transition: transform 0.4s linear, rotate 0.4s linear, opacity 0.4s linear;
+}
+
+.change .bar1 {
+    transform: translate(0, 9px) rotate(-45deg);
+}
+  
+.change .bar2 {
+    opacity: 0;
+}
+  
+.change .bar3 {
+    transform: translate(0, -7px) rotate(45deg);
+}
 
 h3{
     font-size: 28px;
@@ -71,7 +112,14 @@ h3{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 32px;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    z-index: 5;
+}
+
+.logo{
+    padding-left: 30px;
 }
 
 .logo img{
@@ -304,6 +352,37 @@ h3{
     align-items: center;
     min-width: 118px;
 }
+/* counter section */
+
+.counter_sec{
+    margin: 20px 80px;
+}
+
+.counter_main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.count_head{
+    color:#AB3E03;
+    display: inline-block;
+    font-size: 60px;
+
+}
+
+.counter_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.count_text{
+    font-size: 24px;
+}
 
 /* impact section */
 .impact_sec{
@@ -374,6 +453,10 @@ h3{
 }
 
 /*Banner Section*/
+
+.banner_head h3{
+    margin-left: 80px;
+}
 
 .banner_carousel {
     overflow: hidden;
@@ -707,12 +790,16 @@ h3{
     .about_sec {
         gap: 60px;
     }
+    .counter_main{
+        gap: 40px;
+    }
     .banner_block {
         min-height: 275px;
     }
     .footer_main {
         gap: 25px;
     }
+    
     
 }
 
@@ -730,6 +817,15 @@ h3{
     }
     .nav ul li a {
         font-size: 13px;
+    }
+    .guj{
+        left: 6.5%;
+    }
+    .raj{
+        left: 10%;
+    }
+    .mp{
+        left: 18.5%;
     }
     .active{
         font-size: 15px !important;
@@ -783,6 +879,12 @@ h3{
     .about_section{
         margin: 40px 50px;
     }
+    .counter_sec {
+        margin: 20px 50px;
+    }
+    .banner_head h3{
+        margin-left: 50px;
+    }
     .wel_text, .focus_foot {
         font-size: 18px;
     }
@@ -817,11 +919,202 @@ h3{
 }
 
 @media screen and (max-width: 768px){
+    .logo{
+        padding-left: 15px;
+    }
 
+    .hero_main {
+        padding-left: 20px;
+    }
+    .hero_text h1 {
+        font-size: 42px;
+        max-width: 500px;
+    }
+    .about_sec {
+        margin: 40px 20px;
+    }
+    .guj{
+        left: 8%;
+    }
+    .raj{
+        left: 12%;
+    }
+    .mp{
+        left: 22%;
+    }
+    .banner_head h3{
+        margin-left: 20px;
+    }
+    .counter_sec {
+        margin: 20px 20px;
+    }
+    .impact_sec {
+        margin: 20px 20px;
+    }
+    .footer_head {
+        margin: 0px 20px;
+    }
+    .footer_main {
+        margin: 50px 20px;
+    }
+
+    .footer_copy {
+        padding: 15px 20px;
+    }
+    .fcont_head{
+        font-size: 18px;
+    }
+    .f_links ul li a, .sign_text, .foot_contact .fcont_details a{
+        font-size: 14px;
+    }
+    .foot_news, .foot_contact{
+        width: 40%;
+    }
+    #email::placeholder{
+        font-size: 11px;
+    }
+    .sign_form .form_sub{
+        right: 13px;
+    }
+    .privacy_text{
+        gap: 35px;
+    }
+    .nav {
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        background: #fff;
+        height: 100%;
+        width: 60%;
+        transform: translateX(100%);
+        left: 100%;
+        transition: left 0.4s ease-in-out, transform 0.4s ease-in-out;
+        align-items: center;
+    }
+    .nav ul{
+        flex-direction: column;
+        gap: 100px;
+        margin: 0;
+        margin: 60px 0px;
+    }
+    .nav_drop{
+        z-index: 2;
+    }
+    .nav ul li a {
+        font-size: 25px;
+    }
+    .nav .donate_btn{
+        padding: 12px 30px;
+    }
+    .active{
+        font-size: 27px !important;
+    }
+    .menu_btn{
+        display: block;
+        margin-right: 15px;
+    }
+    .show{
+        left: 40%;
+        transform: translateX(0);
+        transition: left 0.4s ease-in-out;
+    }
+    .nav_extend.dropit .nav_drop {
+        display: block;
+    }
+    h3{
+        font-size: 30px;
+    }
+    .wel_text, .focus_foot {
+        font-size: 20px;
+    }
+    .focus_main {
+        font-size: 18px;
+    }
+    .focus_text {
+        font-size: 17px;
+    }
+    .impact_text {
+        font-size: 22px;
+    }
+    .count_head{
+        font-size: 50px;
+    }
+    .count_text {
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 480px){
-
+    .nav ul li a {
+        font-size: 20px;
+    }
+    .active {
+        font-size: 22px !important;
+    }
+    .hero_text h1 {
+        font-size: 36px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    .wel_text, .focus_foot {
+        font-size: 16px;
+    }
+    .focus_main {
+        font-size: 16px;
+    }
+    .focus_text {
+        font-size: 15px;
+    }
+    .reach_img img{
+        width: 100%;
+    }
+    .counter_main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .count_head {
+        font-size: 44px;
+    }
+    .count_text {
+        font-size: 20px;
+    }
+    .impact_card{
+        min-height: 220px;
+        max-width: 320px;
+    }
+    .impact_img img {
+        height: 170px;
+        width: 300px;
+    }
+    .foot_slogan img{
+        width: 65%;
+    }
+    .foot_slogan h2{
+        font-size: 32px;
+    }
+    .foot_expl{
+        font-size: 18px;
+    }
+    .footer_copy, .footer_copy a{
+        font-size: 9px;
+    }
+    .privacy_text {
+        gap: 20px;
+    }
+    .reach_img div{
+        font-size: 8px;
+    }
+    .guj {
+        left: 10%;
+    }
+    .raj {
+        top: 36.5%;
+        left: 15%;
+    }
+    .mp {
+        left: 28%;
+    }
 }
 
 @media screen and (max-width: 320px){
