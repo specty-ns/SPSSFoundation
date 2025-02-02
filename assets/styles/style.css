@@ -158,9 +158,9 @@ h3{
     display: none;
 }
 
-.nav_extend:hover .nav_drop {
+/* .nav_extend:hover .nav_drop {
     display: block;
-}
+} */
 
 .nav_drop .dropitem{
     border: 1px solid #652502;
@@ -181,6 +181,10 @@ h3{
     font-size: 18px;
     font-weight: 700;
     text-decoration: none;
+}
+
+.mobile_angle{
+    display: none;
 }
 
 .active{
@@ -369,7 +373,6 @@ h3{
     color:#AB3E03;
     display: inline-block;
     font-size: 60px;
-
 }
 
 .counter_card{
@@ -378,7 +381,15 @@ h3{
     align-items: center;
 }
 
+.count_block{
+    display: flex;
+    align-items: center;
+}
 
+.count_block i{
+    color:#AB3E03;
+    font-size: 28px;
+}
 
 .count_text{
     font-size: 24px;
@@ -454,19 +465,48 @@ h3{
 
 /*Banner Section*/
 
+.logo-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center; /* Horizontally center the container */
+    align-items: center; /* Vertically center the container (if height is set) */
+}
+
+.logo-slider:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: flex;
+    justify-content: center; /* Horizontally center the images inside logos-slide */
+    align-items: center; /* Vertically center images (if height is set) */
+    animation: 45s slide infinite linear;
+}
+
+.logos-slide img {
+    width: 160px;
+    height: auto;
+    margin: 0 40px;
+}
+
 .banner_head h3{
     margin-left: 80px;
 }
 
-.banner_carousel {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    background: white;
-    white-space: nowrap;
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
 
-.banner_carousel::before {
+.logo-slider::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -477,7 +517,7 @@ h3{
     z-index: 2;
 }
 
-.banner_carousel::after {
+.logo-slider::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -487,58 +527,6 @@ h3{
     content: "";
     z-index: 2;
 }
-
-.banner_track {
-    display: flex;
-    gap: 40px; /* Adjust spacing between images */
-    will-change: transform;
-}
-
-/* Keyframe animation for infinite scrolling */
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-.banner_block{
-    display: flex;
-    align-items: center;
-    flex: 0 0 auto;
-    animation: scroll 30s linear infinite;
-}
-
-.banner_block:hover{
-    animation-play-state: paused;
-}
-
-.banner_block img {
-    height: auto;
-    max-width: none;
-    flex-shrink: 0;
-    padding: 0 30px;
-}
-
-
-/* .banner_carousel #left {
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    color: #F15704;
-    font-size: 48px;
-}
-
-.banner_carousel #right {
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    font-size: 48px;
-    color: #F15704;
-} */
-
 
 /*footer*/
 
@@ -605,6 +593,8 @@ h3{
 
 .foot_contact .c_detail{
     padding-top: 20px;
+    color: #FFF;
+
 }
 
 .foot_contact .fcont_details i{
@@ -927,7 +917,6 @@ h3{
     .logo{
         padding-left: 15px;
     }
-    
     .hero_main {
         padding-left: 20px;
     }
@@ -947,6 +936,12 @@ h3{
     .mp{
         left: 26%;
     }
+    .mobile_angle{
+        display: inherit;
+    }
+    .pc_angle{
+        display: none;
+    }
     .banner_head h3{
         margin-left: 20px;
     }
@@ -962,7 +957,6 @@ h3{
     .footer_main {
         margin: 50px 20px;
     }
-
     .footer_copy {
         padding: 15px 20px;
     }
@@ -996,14 +990,14 @@ h3{
         transition: left 0.4s ease-in-out, transform 0.4s ease-in-out;
         align-items: center;
     }
-    .nav ul{
+    .nav ul {
         flex-direction: column;
-        gap: 100px;
-        margin: 0;
-        margin: 60px 0px;
+        gap: 3em;
+        margin: 3em 0px;
     }
     .nav_drop{
         z-index: 2;
+        right: 0;
     }
     .nav ul li a {
         font-size: 25px;
@@ -1070,6 +1064,10 @@ h3{
 }
 
 @media screen and (max-width: 480px){
+    .logo img {
+        width: 100px;
+        height: 90px;
+    }
     .nav ul li a {
         font-size: 20px;
     }
@@ -1121,7 +1119,7 @@ h3{
         font-size: 20px;
     }
     .impact_card{
-        min-height: 220px;
+        min-height: 100%;
         max-width: 320px;
     }
     .impact_img img {
@@ -1180,15 +1178,8 @@ h3{
     .sign_form #email{
         height: 18px;
     }
-    .sign_form .form_sub {
-        padding: 5px 10px;
-        font-size: 9px;
-    }
     #email::placeholder{
         font-size: 8px;
-    }
-    .sign_form .form_sub {
-        right: 1px;
     }
     .sign_text{
         padding-top: 18px;
@@ -1208,56 +1199,159 @@ h3{
     .f_links ul li a, .sign_text, .foot_contact .fcont_details a {
         font-size: 9px;
     }
+    .sign_form .form_sub{
+        position: unset;
+        right: 0;
+        padding: 5px 12px;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    .focus_card .focus_img img{
+        width: 75px;
+    }
 }
 
 @media screen and (max-width: 320px){
+    h3 {
+        font-size: 16px;
+    }
+    .logo img {
+        width: 85px;
+        height: 75px;
+    }
+    .menu_btn{
+        padding: 5px 10px;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 25px;
+    }
     .nav ul {
         margin-top: 5em;
         margin-bottom: 3em;
     }
+    .hero_text h1 {
+        font-size: 24px;
+        max-width: 240px;
+    }
     .hero_btns{
         gap: 10px;
     }
-}
-
-.logo-slider {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    margin: 30px;
-    display: flex;
-    justify-content: center; /* Horizontally center the container */
-    align-items: center; /* Vertically center the container (if height is set) */
-}
-
-.logo-slider:hover .logos-slide {
-    animation-play-state: paused;
-}
-
-.logos-slide {
-    display: flex;
-    justify-content: center; /* Horizontally center the images inside logos-slide */
-    align-items: center; /* Vertically center images (if height is set) */
-    animation: 45s slide infinite linear;
-}
-
-.logos-slide img {
-    width: 160px;
-    height: auto;
-    margin: 0 40px;
-}
-
-
-
-@keyframes slide {
-    from {
-        transform: translateX(0);
+    .hero_btns a {
+        min-width: 100px;
     }
-
-    to {
-        transform: translateX(-100%);
+    .donate_btn, .knowmore_btn {
+        font-size: 12px;
+        padding: 6px 5px;
+    }
+    .donate_btn img {
+        width: 20px;
+    }
+    .knowmore_btn img {
+        color: #F15704;
+        width: 22px;
+    }
+    .wel_text, .focus_foot {
+        font-size: 12px;
+    }
+    .focus_card .focus_img img{
+        width: 50px;
+    }
+    .focus_main {
+        font-size: 12px;
+    }
+    .focus_text {
+        font-size: 10px;
+    }
+    .reach_loc ul li {
+        font-size: 10px;
+        min-width: 135px;
+    }
+    .loc img{
+        width: 20px;
+    }
+    .reach_img div {
+        font-size: 6px;
+    }
+    .guj {
+        left: 9.5%;
+    }
+    .raj{
+        top: 36%;
+        left: 13.5%;
+    }
+    .mp{
+        left: 26.5%;
+    }
+    .impact_card{
+        max-width: none;
+        width: 100%;
+    }
+    .impact_img img {
+        height: 160px;
+        width: 275px;
+    }
+    .impact_text {
+        font-size: 16px;
+    }
+    .impact_btn .donate_btn {
+        width: 200px;
+    }
+    .impact_btn .knowmore_btn {
+        width: 196px;
+    }
+    .logos-slide img {
+        width: 120px;
+    }
+    .foot_slogan h2 {
+        font-size: 20px;
+    }
+    .foot_slogan img {
+        width: 50%;
+    }
+    .foot_expl {
+        font-size: 12px;
+    }
+    .nav ul li a {
+        font-size: 17px;
+    }
+    .active {
+        font-size: 19px !important;
+    }
+    .foot_btns a {
+        min-width: 100px;
+    }
+    .foot_expl{
+        padding-top: 15px;
+    }
+    .foot_btns {
+        padding-top: 25px;
+    }
+    .footer_main{
+        flex-direction: column;
+    }
+    .f_links ul {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+        justify-content: space-between;
+        justify-items: start;
+    }
+    .foot_news, .foot_contact{
+        width: 100%;
+        max-width: unset;
+    }
+    .sign_form .form_sub {
+        position: absolute;
+        top: -6px;
+        right: 12px;
+    }
+    .footer_copy {
+        padding: 10px 20px;
+    }
+    .footer_copy, .footer_copy a {
+        font-size: 6px;
+    }
+    .privacy_text {
+        gap: 10px;
     }
 }
-
-
-
