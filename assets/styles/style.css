@@ -1219,3 +1219,45 @@ h3{
         gap: 10px;
     }
 }
+
+.logo-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    margin: 30px;
+    display: flex;
+    justify-content: center; /* Horizontally center the container */
+    align-items: center; /* Vertically center the container (if height is set) */
+}
+
+.logo-slider:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: flex;
+    justify-content: center; /* Horizontally center the images inside logos-slide */
+    align-items: center; /* Vertically center images (if height is set) */
+    animation: 45s slide infinite linear;
+}
+
+.logos-slide img {
+    width: 160px;
+    height: auto;
+    margin: 0 40px;
+}
+
+
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+

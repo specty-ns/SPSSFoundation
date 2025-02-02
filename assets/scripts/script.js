@@ -74,5 +74,7 @@ observer.observe(health_odo);
 observer.observe(env_odo);
 observer.observe(emp_odo);
 observer.observe(comm_odo);
+var copy = document.querySelector(".logos-slide").cloneNode(true);
+document.querySelector(".logo-slider").appendChild(copy);
 
 };
