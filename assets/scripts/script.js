@@ -51,19 +51,19 @@ window.onload = function () {
         if (entry.isIntersecting) {
           switch (entry.target) {
             case edu_odo:
-              startCounter(edu_odo, 2800);
+              startCounter(edu_odo, 3216);
               break;
             case health_odo:
-              startCounter(health_odo, 25800);
+              startCounter(health_odo, 147572);
               break;
             case env_odo:
-              startCounter(env_odo, 1800);
+              startCounter(env_odo, 1811);
               break;
             case emp_odo:
-              startCounter(emp_odo, 140);
+              startCounter(emp_odo, 167);
               break;
             case comm_odo:
-              startCounter(comm_odo, 41000);
+              startCounter(comm_odo, 51407);
               break;
           }
         }

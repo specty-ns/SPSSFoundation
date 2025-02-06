@@ -218,10 +218,15 @@ h3{
 .hero_sec{
     width: 100%;
     height: 905px;
-    background: url(../images/hero_back.jpeg) lightgray -1.108px -2.097px / 100.077% 100.232% no-repeat;
-}
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.8)), url("../images/hero_back.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}   
 
 .hero_main{
+    /* background-color: rgba(0, 0, 0, 0.3); */
     padding-top: 215px;
     padding-left: 70px;
 }
