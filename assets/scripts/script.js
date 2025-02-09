@@ -9,8 +9,7 @@ window.onload = function () {
   var navExtend = document.querySelectorAll(".nav_extend");
 
   navExtend.forEach(function (item) {
-    item.addEventListener("click", function (event) {
-      event.preventDefault();
+    item.addEventListener("mouseenter", function (event) {
 
       navExtend.forEach((el) => {
         if (el !== item) {
@@ -20,6 +19,9 @@ window.onload = function () {
 
       item.classList.toggle("dropit");
     });
+    item.addEventListener("mouseleave", function () {
+      item.classList.remove("dropit"); 
+  });
   });
 
   var edu_odo = document.querySelector(".odometer1");
