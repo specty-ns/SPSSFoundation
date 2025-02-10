@@ -293,8 +293,10 @@ h3{
 
 .focus_head h3{
     margin-top: 48px;
-    margin-bottom: 33pxs;
+    margin-bottom: 33px;
 }
+
+
 
 .focus_row{
     display: flex;
@@ -738,15 +740,15 @@ h3{
 
 /* Section Transition */
 
-.section-transition {
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Start slightly above */
-    transition: opacity 1s ease, transform 1s ease; /* Transition for fade and move */
+/*.section-transition {
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 1s ease, transform 1s ease; 
   }
 .show-section {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Move into place */
-}
+    opacity: 1; 
+    transform: translateY(0); 
+}*/
 
 /* Scroll to top */
 
@@ -781,38 +783,58 @@ h3{
     background-position: -199.461px -334.154px; /* Position of the image */
     background-size: 120.157% 264.155%; /* Size of the image */
     background-repeat: no-repeat; /* Prevents repeating */
-
     margin-top: 120px; 
     padding: 100px 0;
   }
+
   .page_name h2{
     margin: 0;
   }
+
   .page_name, .breadcrumbs, .bread_img{
     text-align: center;
   }
+
   .bread_img{
     margin-top: 30px;
   }
+
   .breadcrumbs_sec ul li{
     display: inline-block;
   }
+
   .breadcrumbs ul li+li:before {
     padding: 0 8px;
     content: "\203a";
     color: #fff;
     font-size: 28px;
   }
+
   a.bread_active{
     color: #fff !important;
   }
+
   .breadcrumbs a{
     font-size: 20px;
     font-weight: 700;
     color: #F15704;
   }
   
+  .work_head h3{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+  }
 
+  .work_card{
+    min-height: unset;
+    max-width: none;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 25px;
+    border-style: solid;
+  }
+  
 
 /* Resposive Screens */
 

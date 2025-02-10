@@ -86,7 +86,7 @@ window.onload = function () {
 var copy = document.querySelector(".logos-slide").cloneNode(true);
 document.querySelector(".logo-slider").appendChild(copy);
 //  section transition js
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".section-transition");
 
   const options = {
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach((section) => {
     observer.observe(section); // Observe each section
   });
-});
+});*/
 
 // scroll to top js
 
