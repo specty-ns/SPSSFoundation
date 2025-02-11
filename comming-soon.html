@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon - SP Seva Sansthan Foundation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(0deg, #F15704, #035C01, #012700);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 150px;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin: 10px 0 20px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .countdown div {
+      text-align: center;
+    }
+
+    .countdown div span {
+      display: block;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .countdown div small {
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+
+    .notify {
+      margin-top: 20px;
+    }
+
+    .notify input {
+      padding: 10px;
+      border: none;
+      border-radius: 30px;
+      width: 250px;
+      margin-right: 10px;
+      outline: none;
+    }
+
+    .notify button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ffffff;
+      color: #c31d33;
+      font-weight: 600;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .notify button:hover {
+      background-color: #c31d33;
+      color: #ffffff;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .countdown {
+        flex-wrap: wrap;
+      }
+
+      .notify input {
+        width: 200px;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="images/logo_main.png" alt="SP Seva Sansthan Logo">
+    </div>
+    <h1 class="title">We're Coming Soon!</h1>
+    <p class="subtitle">SP Seva Sansthan Foundation is dedicated to creating a better tomorrow. While we work on building our website, stay connected and support our mission.</p>
+    
+    <div class="countdown">
+      <div>
+        <span id="days">00</span>
+        <small>Days</small>
+      </div>
+      <div>
+        <span id="hours">00</span>
+        <small>Hours</small>
+      </div>
+      <div>
+        <span id="minutes">00</span>
+        <small>Minutes</small>
+      </div>
+      <div>
+        <span id="seconds">00</span>
+        <small>Seconds</small>
+      </div>
+    </div>
+    
+
+    
+    <p class="footer">© 2025 SP Seva Sansthan Foundation. All rights reserved.</p>
+  </div>
+
+  <script>
+    const launchDate = new Date("February 21, 2025 00:00:00").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const gap = launchDate - now;
+
+      const day = 1000 * 60 * 60 * 24;
+      const hour = 1000 * 60 * 60;
+      const minute = 1000 * 60;
+      const second = 1000;
+
+      const days = Math.floor(gap / day);
+      const hours = Math.floor((gap % day) / hour);
+      const minutes = Math.floor((gap % hour) / minute);
+      const seconds = Math.floor((gap % minute) / second);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    };
+
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
