@@ -10,7 +10,6 @@ window.onload = function () {
 
   navExtend.forEach(function (item) {
     item.addEventListener("mouseenter", function (event) {
-
       navExtend.forEach((el) => {
         if (el !== item) {
           el.classList.remove("dropit");
@@ -20,8 +19,8 @@ window.onload = function () {
       item.classList.toggle("dropit");
     });
     item.addEventListener("mouseleave", function () {
-      item.classList.remove("dropit"); 
-  });
+      item.classList.remove("dropit");
+    });
   });
 
   var edu_odo = document.querySelector(".odometer1");
@@ -86,7 +85,7 @@ window.onload = function () {
 var copy = document.querySelector(".logos-slide").cloneNode(true);
 document.querySelector(".logo-slider").appendChild(copy);
 //  section transition js
-/*document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".section-transition");
 
   const options = {
@@ -107,7 +106,7 @@ document.querySelector(".logo-slider").appendChild(copy);
   sections.forEach((section) => {
     observer.observe(section); // Observe each section
   });
-});*/
+});
 
 // scroll to top js
 
@@ -130,6 +129,12 @@ function scrollFunction() {
 function topFunction() {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth' // Smooth scroll
+    behavior: "smooth", // Smooth scroll
   });
+}
+
+// smooth scroll to section for nav bar URLs
+
+function navigateToSection(sectionId) {
+  sessionStorage.setItem("scrollToSection", sectionId);
 }
