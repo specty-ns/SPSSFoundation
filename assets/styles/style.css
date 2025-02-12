@@ -295,9 +295,9 @@ h3{
     margin-top: 48px;
     margin-bottom: 33px;
 }
-
-
-
+.focus_text{
+    padding-top: 5px;
+}
 .focus_row{
     display: flex;
     justify-content: space-between;
