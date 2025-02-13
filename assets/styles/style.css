@@ -907,8 +907,14 @@ h3{
     .footer_main {
         gap: 25px;
     }
-    
-    
+    .page_name h2 {
+        font-size: 48px;
+    }
+    .work_card{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 25px;
+    }
 }
 
 @media screen and (max-width: 1024px){
@@ -1028,7 +1034,10 @@ h3{
     .counter_card{
         flex: 1 0 auto;
     }
-
+    .breadcrumbs_sec{
+        background-position: -200px -290px;
+        background-size: 120% 240%;    
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -1176,6 +1185,11 @@ h3{
     .hero_main {
         padding: 175px 0 120px 20px;
     }
+    .breadcrumbs_sec {
+        background-position: -195px -270px;
+        background-size: 170% 230%;
+        padding: 70px 0;
+    }
 }
 
 @media screen and (max-width: 480px){
@@ -1237,6 +1251,11 @@ h3{
         min-height: 100%;
         max-width: 320px;
     }
+    .work_card {
+        min-height: unset;
+        max-width: none;
+        width: auto;
+    }    
     .impact_img img {
         height: 170px;
         width: 300px;
@@ -1324,6 +1343,12 @@ h3{
     .focus_card .focus_img img{
         width: 75px;
     }
+    .breadcrumbs_sec {
+        background-position: -193px -149px;
+        background-size: 170% 215%;
+        padding: 50px 0;
+    }
+
 }
 
 @media screen and (max-width: 320px){
@@ -1401,6 +1426,10 @@ h3{
         max-width: none;
         width: 100%;
     }
+    .work_card {
+        min-height: unset;
+        max-width: none;
+    }    
     .impact_img img {
         height: 160px;
         width: 275px;
