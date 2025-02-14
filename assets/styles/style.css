@@ -777,14 +777,22 @@ h3{
 
   /* BreadCrumbs Section */
   .breadcrumbs_sec{
-    background-image: url(../images/our_work/breadcrumbs.jpeg); /* Image URL */
     background-color: rgba(1, 39, 0, 0.64); /* Background color */
     background-blend-mode:multiply ;
-    background-position: -199.461px -334.154px; /* Position of the image */
-    background-size: 120.157% 264.155%; /* Size of the image */
+    background-position: center; /* Position of the image */
+    background-size: cover; /* Size of the image */
     background-repeat: no-repeat; /* Prevents repeating */
     margin-top: 120px; 
     padding: 100px 0;
+  }
+
+  .aow_bread_image{
+    background-image: url(../images/our_work/breadcrumbs.jpeg); /* Image URL */
+  }
+
+  .abtus_bread_image{
+    background-position: 0 -100px; /* Position of the image */
+    background-image: url(../images/about_us/breadcrumbs.jpg);
   }
 
   .page_name h2{
@@ -1034,10 +1042,6 @@ h3{
     .counter_card{
         flex: 1 0 auto;
     }
-    .breadcrumbs_sec{
-        background-position: -200px -290px;
-        background-size: 120% 240%;    
-    }
 }
 
 @media screen and (max-width: 768px){
@@ -1186,8 +1190,6 @@ h3{
         padding: 175px 0 120px 20px;
     }
     .breadcrumbs_sec {
-        background-position: -195px -270px;
-        background-size: 170% 230%;
         padding: 70px 0;
     }
 }
@@ -1344,11 +1346,18 @@ h3{
         width: 75px;
     }
     .breadcrumbs_sec {
-        background-position: -193px -149px;
-        background-size: 170% 215%;
         padding: 50px 0;
+        margin-top: 95px;
     }
-
+    .page_name h2 {
+        font-size: 42px;
+    }
+    .breadcrumbs a {
+        font-size: 18px;
+    }
+    .breadcrumbs ul li+li:before {
+        padding: 0 6px;
+    }
 }
 
 @media screen and (max-width: 320px){
@@ -1424,7 +1433,6 @@ h3{
     }
     .impact_card{
         max-width: none;
-        width: 100%;
     }
     .work_card {
         min-height: unset;
@@ -1498,4 +1506,17 @@ h3{
     .privacy_text {
         gap: 10px;
     }
+    .page_name h2 {
+        font-size: 38px;
+    }
+    .breadcrumbs a {
+        font-size: 16px;
+    }
+    .breadcrumbs_sec {
+        padding: 40px 0;
+        margin-top: 80px;
+    }
+    .bread_img {
+        margin-top: 15px;
+    }    
 }
