@@ -21,7 +21,7 @@
                 <ul>
                     <li><a class="nav_link" href="./">Home</a></li>
                     <li class="nav_extend">
-                        <a class="nav_link" href="#">
+                        <a class="active nav_link" href="#">
                             <i class="mobile_angle fa-solid fa-angle-down"></i> About Us <i
                                 class="pc_angle fa-solid fa-angle-down"></i>
                         </a>
@@ -33,7 +33,7 @@
                             <div class="dropitem"><a href="#">Advisory member's</a></div>
                         </div>
                     </li>
-                    <li class="nav_extend"><a class="active nav_link">
+                    <li class="nav_extend"><a class="nav_link">
                         <i class="mobile_angle fa-solid fa-angle-down"></i> Area of Work <i class="pc_angle fa-solid fa-angle-down"></i></a>
                         <div id="nav_drop2" class="nav_drop">
                             <div class="dropitem"><a href="area-of-work.html#education">Education</a></div>
@@ -103,12 +103,12 @@
         <section>
             <div class="abtus_bread_image breadcrumbs_sec">
                 <div class="page_name">
-                    <h2>Area of Work</h2>
+                    <h2>About Us</h2>
                 </div>
                 <div class="breadcrumbs">
                     <ul>
                         <li><a href="./">Home</a></li>
-                        <li><a class="bread_active" href="./">Area of Work</a></li>
+                        <li><a class="bread_active" href="./">About Us</a></li>
                     </ul>
                 </div>
                 <div class="bread_img">
@@ -125,7 +125,29 @@
         </section>
         <!-- overview section -->
          <section>
-            
+            <div class="about_sec">
+                <div class="about_welcome">
+                    <div class="welcome_sec">
+                        <div class="wel_head section-transition">
+                            <h3><strong>Overview</strong></h3>
+                        </div>
+                        <div class="wel_text section-transition">SP Seva Sansthan Foundation (SPSS Foundation) is a 
+                            dynamic social organization committed to uplifting underprivileged communities, 
+                            emphasizing education, health, environment, and women's empowerment. 
+                            Established in 2021, Our mission is to address underprivileged communities' 
+                            challenges through local insights and strong community support.
+                        </div>
+                    </div>
+                    <!-- Focus end text -->
+                    <div class="focus_foot section-transition">
+                        Specializing in grassroots-level interventions, 
+                        we have Actively engaged in critical areas like cancer and menstrual hygiene. 
+                        We aim to make a significant impact across sectors, 
+                        serving as a catalyst for justice, dignity and to bring sustainable change in the lives of 
+                        underprivileged individuals and communities. 
+                    </div>
+                </div>
+            </div>
          </section>
     </main>
     <footer>
@@ -214,43 +236,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Check if a section was stored from the previous page
-            const sectionId = sessionStorage.getItem("scrollToSection");
-    
-            if (sectionId) {
-                const target = document.getElementById(sectionId);
-                if (target) {
-                    setTimeout(() => {
-                        target.scrollIntoView({ behavior: "smooth" });
-    
-                        // Clear stored section ID after scrolling
-                        sessionStorage.removeItem("scrollToSection");
-                    }, 100); // Small delay ensures smooth scrolling after load
-                }
-            }
-    
-            // Smooth scrolling for internal links
-            document.querySelectorAll('a[href^="area-of-work.html#"]').forEach(anchor => {
-                anchor.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    const targetId = this.getAttribute("href").split("#")[1];
-                    const target = document.getElementById(targetId);
-    
-                    if (target) {
-                        target.scrollIntoView({ behavior: "smooth" });
-    
-                        // Remove hash from URL after scrolling
-                        setTimeout(() => {
-                            history.replaceState(null, null, window.location.pathname);
-                        }, 500);
-                    }
-                });
-            });
-        });
-    </script>
-
     <script src="./assets/scripts/script.js"></script>
     <script src="./assets/scripts/odometer.min.js"></script>
 </body>
