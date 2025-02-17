@@ -7,7 +7,7 @@ html, body{
     box-sizing: border-box;
 }
 h2{
-    color:#FFF;
+    color:#fff;
     font-size: 56px;
     font-weight: 500;
 }
@@ -178,7 +178,7 @@ h3{
 
 .nav_drop .dropitem{
     border: 1px solid #652502;
-    background: #FFF;
+    background: #fff;
     padding: 10px 20px;
     text-align: center;
 }
@@ -605,7 +605,7 @@ h3{
 }
 
 .fcont_head{
-    color: #FFF;
+    color: #fff;
     font-size: 24px;
     font-weight: 700;
     text-decoration-line: underline;
@@ -614,7 +614,7 @@ h3{
 
 .foot_contact .c_detail{
     padding-top: 20px;
-    color: #FFF;
+    color: #fff;
 
 }
 
@@ -624,7 +624,7 @@ h3{
 }
 
 .foot_contact .fcont_details a{
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
@@ -671,7 +671,7 @@ h3{
 }
 
 .sign_text{
-    color: #FFF;
+    color: #fff;
     font-size: 16px;
     font-weight: 600;
     padding-top: 32px;
@@ -684,12 +684,12 @@ h3{
 
 .sign_form #email{
     border-radius: 32px;
-    border: 2px solid #FFF;
+    border: 2px solid #fff;
     padding: 4px 4px 4px 12px;
     background-color: transparent;
     width: 95%;
     height: 48px;
-    color: #FFF;
+    color: #fff;
 }
 
 #email::placeholder{
@@ -706,14 +706,14 @@ h3{
     border: 0;
     font-size: 20px;
     font-weight: 700;
-    color: #FFF;
+    color: #fff;
     font-family: inherit;
     top: 5px;
     right: 5px;
 }
 
 .footer_copy{
-    color: #FFF;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     background-color: #DB4F04;
@@ -733,7 +733,7 @@ h3{
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
-    color: #FFF;
+    color: #fff;
     font-size: 13px;
     font-weight: 700;
 }
@@ -771,12 +771,12 @@ h3{
     box-shadow: 2px 2px 4px grey;
   }
   
-  #scrollToTop:hover {
+#scrollToTop:hover {
     background: #DB4F04;
-  }
+}
 
   /* BreadCrumbs Section */
-  .breadcrumbs_sec{
+.breadcrumbs_sec{
     background-color: rgba(1, 39, 0, 0.64); /* Background color */
     background-blend-mode:multiply ;
     background-position: center; /* Position of the image */
@@ -784,65 +784,113 @@ h3{
     background-repeat: no-repeat; /* Prevents repeating */
     margin-top: 120px; 
     padding: 100px 0;
-  }
+}
 
-  .aow_bread_image{
+.aow_bread_image{
     background-image: url(../images/our_work/breadcrumbs.jpeg); /* Image URL */
-  }
+}
 
-  .abtus_bread_image{
+.abtus_bread_image{
     background-position: 0 -100px; /* Position of the image */
     background-image: url(../images/about_us/breadcrumbs.jpg);
-  }
+}
 
-  .page_name h2{
+.page_name h2{
     margin: 0;
-  }
+}
 
-  .page_name, .breadcrumbs, .bread_img{
+.page_name, .breadcrumbs, .bread_img{
     text-align: center;
-  }
+}
 
-  .bread_img{
+.bread_img{
     margin-top: 30px;
-  }
+}
 
-  .breadcrumbs_sec ul li{
+.breadcrumbs_sec ul li{
     display: inline-block;
-  }
+}
 
-  .breadcrumbs ul li+li:before {
+.breadcrumbs ul li+li:before {
     padding: 0 8px;
     content: "\203a";
     color: #fff;
     font-size: 28px;
-  }
+}
 
-  a.bread_active{
+a.bread_active{
     color: #fff !important;
-  }
+}
 
-  .breadcrumbs a{
+.breadcrumbs a{
     font-size: 20px;
     font-weight: 700;
     color: #F15704;
-  }
+}
   
-  .work_head h3{
+.work_head h3{
     text-decoration: none;
     font-size: 20px;
     font-weight: 700;
-  }
+}
 
-  .work_card{
+.work_card{
     min-height: unset;
     max-width: none;
     flex-direction: row;
     justify-content: space-between;
     padding: 30px 25px;
     border-style: solid;
-  }
-  
+}
+
+/* overview */
+.overview_sec{
+    gap: unset;
+    font-size: unset;
+}
+
+/* Over View */
+
+.overview_text{
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 125.565%;
+}
+
+.over_head{
+    background-color: #024101;
+    color: #fff;
+}
+.over_block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.over_box{
+    flex: 0 0 45%;
+    border-bottom: 8px solid var(--Foundation-Green-green-300, #569255);
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.over_body{
+    text-align: center;
+}
+
+.over_img img{
+    width: 50%;
+}
+
+.over_head{
+    padding: 18px 0;
+    text-align: center;
+}
+
+.over_text{
+    color: #024101;
+}
 
 /* Resposive Screens */
 
@@ -1358,6 +1406,10 @@ h3{
     .breadcrumbs ul li+li:before {
         padding: 0 6px;
     }
+    .work_focus{
+        width: auto;
+        max-width: 175px;
+    }
 }
 
 @media screen and (max-width: 320px){
@@ -1518,5 +1570,12 @@ h3{
     }
     .bread_img {
         margin-top: 15px;
-    }    
+    }
+    .work_card{
+        gap: 10px;
+        padding: 15px;
+    }
+    .work_focus{
+        max-width: 115px;
+    }
 }
