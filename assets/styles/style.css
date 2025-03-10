@@ -890,8 +890,53 @@ a.bread_active{
 
 .over_text{
     color: #024101;
+    padding: 30px 20px;
 }
 
+/*team sec*/
+
+.team_sec{
+    display: block;
+    gap: unset;
+}
+
+.team_body{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.team_box{
+    border-radius: 8px;
+    border: 2px solid #B1CCB0;
+    padding: 15px;
+    display: flex;
+    width: 45%;
+    gap: 15px;
+}
+
+.team_desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.team_desc .team_text{
+    color: #012700;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.team_desc .team_name{
+    color: #012700;
+    font-size: 14px;
+    font-weight: 600;
+}
+.team_box img{
+    border-radius: 4px;
+    border: 2px solid #F15704;
+    width: 10%;
+}
 /* Resposive Screens */
 
 
@@ -970,6 +1015,9 @@ a.bread_active{
         flex-wrap: wrap;
         justify-content: space-evenly;
         gap: 25px;
+    }
+    .team_box img{
+        width: 14%;
     }
 }
 
@@ -1089,6 +1137,27 @@ a.bread_active{
     
     .counter_card{
         flex: 1 0 auto;
+    }
+    .over_text {
+        padding: 20px 10px;
+    }
+    .team_box img {
+        width: 20%;
+    }
+    .team_desc .team_name, .team_desc .team_text{
+        font-size: 12px;
+    }
+    .abtus_bread_image {
+        background-position: 0 -60px;
+    }
+    .team_body{
+        gap: 15px;
+    }
+    .over_img img {
+        width: 60%;
+    }
+    .over_box_sec .over_text{
+        font-size: 13px;
     }
 }
 
@@ -1239,6 +1308,18 @@ a.bread_active{
     }
     .breadcrumbs_sec {
         padding: 70px 0;
+    }
+    .over_img img {
+        width: 80%;
+    }
+    .team_box{
+        width: auto;
+    }
+    .team_desc .team_name, .team_desc .team_text {
+        font-size: 16px;
+    }
+    .team_box img {
+        width: 18%;
     }
 }
 
@@ -1410,6 +1491,19 @@ a.bread_active{
         width: auto;
         max-width: 175px;
     }
+    .over_box{
+        flex: 0 0 100%;
+    }
+    .team_desc .team_name, .team_desc .team_text {
+        font-size: 12px;
+    }
+    .abtus_bread_image {
+        background-position: 0px;
+    }
+    .team_box img {
+        width: 25%;
+    }
+
 }
 
 @media screen and (max-width: 320px){
@@ -1559,7 +1653,7 @@ a.bread_active{
         gap: 10px;
     }
     .page_name h2 {
-        font-size: 38px;
+        font-size: 34px;
     }
     .breadcrumbs a {
         font-size: 16px;
@@ -1577,5 +1671,11 @@ a.bread_active{
     }
     .work_focus{
         max-width: 115px;
+    }
+    .team_box img {
+        width: 28%;
+    }
+    .team_desc .team_name, .team_desc .team_text {
+        font-size: 8px;
     }
 }
