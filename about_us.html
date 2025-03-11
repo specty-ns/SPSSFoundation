@@ -417,7 +417,10 @@
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const navbarHeight = document.querySelector(".navbar").offsetHeight; // Get navbar height
+            function getNavbarHeight() {
+                const navbar = document.querySelector(".navbar");
+                return navbar ? navbar.offsetHeight : 0;
+            }
 
             // Check if a section was stored from the previous page
             const sectionId = sessionStorage.getItem("scrollToSection");
@@ -426,14 +429,16 @@
                 const target = document.getElementById(sectionId);
                 if (target) {
                     setTimeout(() => {
-                        window.scrollTo({
-                            top: target.offsetTop - navbarHeight - 20, // Adjust for navbar + extra padding
-                            behavior: "smooth"
-                        });
+                        requestAnimationFrame(() => {
+                            window.scrollTo({
+                                top: target.offsetTop - getNavbarHeight() - 20,
+                                behavior: "smooth"
+                            });
 
-                        // Clear stored section ID after scrolling
-                        sessionStorage.removeItem("scrollToSection");
-                    }, 100); // Small delay ensures smooth scrolling after load
+                            // Clear stored section ID after scrolling
+                            sessionStorage.removeItem("scrollToSection");
+                        });
+                    }, 150); // Increased delay for better mobile handling
                 }
             }
 
@@ -445,15 +450,17 @@
                     const target = document.getElementById(targetId);
 
                     if (target) {
-                        window.scrollTo({
-                            top: target.offsetTop - navbarHeight - 20, // Adjust for navbar + extra padding
-                            behavior: "smooth"
-                        });
+                        requestAnimationFrame(() => {
+                            window.scrollTo({
+                                top: target.offsetTop - getNavbarHeight() - 20,
+                                behavior: "smooth"
+                            });
 
-                        // Remove hash from URL after scrolling
-                        setTimeout(() => {
-                            history.replaceState(null, null, window.location.pathname);
-                        }, 500);
+                            // Remove hash from URL after scrolling
+                            setTimeout(() => {
+                                history.replaceState(null, null, window.location.pathname);
+                            }, 500);
+                        });
                     }
                 });
             });
