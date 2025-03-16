@@ -937,6 +937,12 @@ a.bread_active{
     border: 2px solid #F15704;
     width: 10%;
 }
+
+/* Project Section */
+.project_link{
+    text-decoration: none;
+}
+
 /* Resposive Screens */
 
 
