@@ -260,7 +260,7 @@ h3{
 }
 
 .red_text{
-    font-size: 20px;
+    /* font-size: 20px; */
     text-align: center;
     color: #AB3E03;
 }
@@ -799,7 +799,7 @@ h3{
 
 .abtus_bread_image{
     background-position: 0 -100px; /* Position of the image */
-    background-image: url(../images/about_us/breadcrumbs.jpg);
+    background-image: url(../images/about-us/breadcrumbs.jpg);
 }
 
 .page_name h2{
