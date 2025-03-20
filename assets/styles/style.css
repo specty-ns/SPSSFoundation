@@ -747,7 +747,7 @@ h3{
 
 /* Section Transition */
 
-/* .section-transition {
+.section-transition {
     opacity: 0; 
     transform: translateY(20px); 
     transition: opacity 1s ease, transform 1s ease; 
@@ -755,7 +755,7 @@ h3{
 .show-section {
     opacity: 1; 
     transform: translateY(0); 
-} */
+}
 
 /* Scroll to top */
 
