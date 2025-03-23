@@ -260,7 +260,7 @@ h3{
 }
 
 .red_text{
-    font-size: 20px;
+    /* font-size: 20px; */
     text-align: center;
     color: #AB3E03;
 }
@@ -747,7 +747,7 @@ h3{
 
 /* Section Transition */
 
-/* .section-transition {
+.section-transition {
     opacity: 0; 
     transform: translateY(20px); 
     transition: opacity 1s ease, transform 1s ease; 
@@ -755,7 +755,7 @@ h3{
 .show-section {
     opacity: 1; 
     transform: translateY(0); 
-} */
+}
 
 /* Scroll to top */
 
@@ -799,7 +799,7 @@ h3{
 
 .abtus_bread_image{
     background-position: 0 -100px; /* Position of the image */
-    background-image: url(../images/about_us/breadcrumbs.jpg);
+    background-image: url(../images/about-us/breadcrumbs.jpg);
 }
 
 .page_name h2{
@@ -999,9 +999,185 @@ a.bread_active{
 
 /* .pd_overview {
 
+<<<<<<< HEAD
 } */
 /* Resposive Screens */
+=======
+}
+>>>>>>> 0eaccb2ae649ade6f20865c53691ec80d331e6ef
 
+/* Pagination */
+/* Grid Layout */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 images in one row */
+    gap: 16px;
+    padding: 16px;
+}
+.image-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .image-item img {
+    width: 100%;
+    /* height: 100%; */
+    display: block;
+  }
+  
+  .image-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Lightbox Styles */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .lightbox.hidden {
+    display: none;
+  }
+  
+  .lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 992px) {
+    .image-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .image-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .image-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Simple navigation buttons with triangle arrows */
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    /* No background */
+    color: #fff;
+    /* White color for the arrow */
+    font-size: 2rem;
+    /* Arrow size */
+    width: 40px;
+    /* Width of the button */
+    height: 40px;
+    /* Height of the button */
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+  }
+  
+  /* Left arrow (Previous button) */
+  #prev {
+    left: 10px;
+    /* Position from the left */
+  }
+  
+  /* Right arrow (Next button) */
+  #next {
+    right: 10px;
+    /* Position from the right */
+  }
+  
+  /* Left-pointing triangle arrow */
+  #prev::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid #F15704;
+    /* White triangle pointing left */
+  }
+  
+  /* Right-pointing triangle arrow */
+  #next::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #F15704;
+    /* White triangle pointing right */
+  }
+  
+  .pagination {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .pagination button {
+    background-color: #F15704;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+  
+.pagination button:hover {
+    background-color: #5e57a7;
+}
+  
+.pagination button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+  
+  
+/* Resposive Screens */
+  
 
 @media screen and (min-width: 1920px){
     .nav ul li a{

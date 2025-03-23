@@ -1,3 +1,56 @@
+// scroll to top js
+
+let mybutton = document.getElementById("scrollToTop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document smoothly
+function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Smooth scroll
+  });
+}
+
+// smooth scroll to section for nav bar URLs
+
+function navigateToSection(sectionId) {
+  sessionStorage.setItem("scrollToSection", sectionId);
+}
+//  section transition js
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".section-transition");
+
+  const options = {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px",
+    threshold: 0.1, // Trigger when 10% of the section is visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show-section");
+        observer.unobserve(entry.target); // Stop observing once shown
+      }
+    });
+  }, options);
+
+  sections.forEach((section) => {
+    observer.observe(section); // Observe each section
+  });
+});
 window.onload = function () {
   var menubtn = document.getElementById("menu_btn");
   var nav = document.getElementById("nav");
@@ -80,61 +133,6 @@ window.onload = function () {
   observer.observe(emp_odo);
   observer.observe(comm_odo);
 };
-
 //   logo slider js
 var copy = document.querySelector(".logos-slide").cloneNode(true);
 document.querySelector(".logo-slider").appendChild(copy);
-//  section transition js
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll(".section-transition");
-
-  const options = {
-    root: null, // Use the viewport as the root
-    rootMargin: "0px",
-    threshold: 0.1, // Trigger when 10% of the section is visible
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show-section");
-        observer.unobserve(entry.target); // Stop observing once shown
-      }
-    });
-  }, options);
-
-  sections.forEach((section) => {
-    observer.observe(section); // Observe each section
-  });
-});
-
-// scroll to top js
-
-let mybutton = document.getElementById("scrollToTop");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document smoothly
-function topFunction() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth", // Smooth scroll
-  });
-}
-
-// smooth scroll to section for nav bar URLs
-
-function navigateToSection(sectionId) {
-  sessionStorage.setItem("scrollToSection", sectionId);
-}

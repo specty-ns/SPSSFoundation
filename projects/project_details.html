@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Details | SPSS Foundation</title>
-    <link rel="stylesheet" href="./assets/styles/all.min.css">
-    <link rel="stylesheet" href="./assets/styles/style.css">
-    <link rel="stylesheet" href="./assets/styles/odometer-theme-default.css">
-    <link rel="SHORTCUT ICON" href="./assets/images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/styles/all.min.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/odometer-theme-default.css">
+    <link rel="SHORTCUT ICON" href="../assets/images/favicon.png" type="image/x-icon" />
     <link rel="canonical" href="./">
 </head>
 <body>
     <header>
         <div class="navbar">
             <div class="logo"><a href="./">
-                    <img src="./assets/images/logo_main.png" alt="SP Seva Sansthan Foundation" width="100%">
+                    <img src="../assets/images/logo_main.png" alt="SP Seva Sansthan Foundation" width="100%">
                 </a>
             </div>
             <nav id="nav" class="nav">
@@ -89,7 +89,7 @@
                         </div>
                     </li>
                 </ul>
-                <a href="#" class="donate_btn"><img src="./assets/images/Donate_svg.svg" alt="Donate button"> Donate</a>
+                <a href="#" class="donate_btn"><img src="../assets/images/Donate_svg.svg" alt="Donate button"> Donate</a>
             </nav>
             <div id="menu_btn" class="menu_btn">
                 <div class="bar1"></div>
@@ -137,7 +137,7 @@
                         <div class="focus_block">
                             <!-- first work row -->
                             <div class="impact_card work_card pd_card">
-                                <img class="pd_img" src="./assets/images/impact/ambulance.jpg" alt="text">
+                                <img class="pd_img" src="../assets/images/projects/health/cervical_cancer/cervical_cancer_cover.jpg" alt="text">
                                 <div class="pd_text">
                                     <div class="work_head pd_head">
                                         <h3>Cervical Cancer: Prevention Through Screening at PHCs</h3>
@@ -228,20 +228,44 @@
                     </div>
                 </div>
             </div>
-         </section>
+        </section>
+        <section>
+            <div class="about_sec pd_sec">
+                <div class="about_welcome">
+            <div class="about_sec team_sec">
+                <div class="red_text" style="font-size: 25px;">
+                    <strong>-- Gallery --</strong>
+                </div>
+            </div>
+            <div id="image-container" class="image-grid"></div>
+    
+            <!-- Lightbox Popup -->
+            <div id="lightbox" class="lightbox hidden">
+                <span class="close">&times;</span>
+                <button id="prev" class="nav-btn"></button> <!-- Left arrow -->
+                <img id="lightbox-img" class="lightbox-img">
+                <button id="next" class="nav-btn"></button> <!-- Right arrow -->
+            </div>
+    
+            <!-- Pagination Controls -->
+            <div id="pagination" class="pagination"></div>
+        </div>
+        </div>
+        </section>
+        
     </main>
 <footer>
     <div class="footer_sec">
         <div class="footer_head">
             <div class="foot_slogan ">
                 <h2>Small acts, <span class="f_orng">big impact!</span></h2>
-                <img src="./assets/images/footer_slogan.png" alt="line">
+                <img src="../assets/images/footer_slogan.png" alt="line">
             </div>
             <div class="foot_expl ">Change a life today, change the world tomorrow.</div>
             <div class="foot_btns ">
-                <a href="#" class="donate_btn"><img src="./assets/images/donate_btn.png" alt="Donate button">
+                <a href="#" class="donate_btn"><img src="../assets/images/donate_btn.png" alt="Donate button">
                     Donate</a>
-                <a href="#" class="knowmore_btn"><img src="./assets/images/knowmore_btn.svg" alt="Knowmore button">
+                <a href="#" class="knowmore_btn"><img src="../assets/images/knowmore_btn.svg" alt="Knowmore button">
                     know More</a>
             </div>
         </div>
@@ -316,7 +340,164 @@
         </div>
     </div>
 </footer>
-<script src="./assets/scripts/script.js"></script>
-<script src="./assets/scripts/odometer.min.js"></script>
+<script>
+    // gallery
+
+const folderPath = "../assets/images/projects/health/cervical_cancer/"; // Path to your images folder
+const totalImages = 10; // Total number of images
+const imagesPerPage = 8; // Number of images per page
+let currentPage = 1; // Current page number
+const container = document.getElementById("image-container");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close");
+const paginationContainer = document.getElementById("pagination");
+
+// Load images dynamically
+const images = [];
+for (let i = totalImages; i >= 1; i--) {
+  const imagePath = `${folderPath}cervical_cancer_img${i}-1.jpg`;
+
+  // Create an image object
+  const img = {
+    src: imagePath,
+    alt: `Cervical Cancer Image ${i}`,
+    title: `Cervical Cancer Image ${i}`,
+  };
+  images.push(img);
+}
+
+// Display images for the current page
+function displayImages() {
+  container.innerHTML = ""; // Clear the container before adding new images
+  const startIndex = (currentPage - 1) * imagesPerPage;
+  const endIndex = Math.min(currentPage * imagesPerPage, images.length);
+
+  for (let i = startIndex; i < endIndex; i++) {
+    const imageItem = document.createElement("div");
+    imageItem.className = "image-item";
+
+    const img = document.createElement("img");
+    img.src = images[i].src; // Thumbnail image
+    img.alt = images[i].alt;
+    img.title = images[i].title;
+
+    // Add click event to show lightbox
+    imageItem.addEventListener("click", () => {
+      // Set the lightbox image source with ascending order
+      const lightboxImagePath = `${folderPath}cervical_cancer_img${totalImages - i}.jpg`; // Adjust the image path for descending order
+      lightboxImg.src = lightboxImagePath;
+      lightboxImg.alt = `Cervical Cancer Image ${totalImages - i}`;
+      lightboxImg.title = `Cervical Cancer Image  ${totalImages - i}`;
+      lightbox.classList.remove("hidden");
+      currentImageIndex = i; // Store the current image index in the lightbox
+    });
+
+    imageItem.appendChild(img);
+    container.appendChild(imageItem);
+  }
+  updatePagination();
+}
+
+// Update pagination buttons
+function updatePagination() {
+  const totalPages = Math.ceil(images.length / imagesPerPage);
+  paginationContainer.innerHTML = ""; // Clear the pagination
+
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "Previous";
+  prevBtn.classList.toggle("disabled", currentPage === 1);
+  prevBtn.addEventListener("click", () => changePage(currentPage - 1));
+  paginationContainer.appendChild(prevBtn);
+
+  // Pagination logic for 5 pages
+  const pageNumbers = [];
+
+  if (currentPage > 2) {
+    // Add first page and ellipsis if needed
+    pageNumbers.push(1);
+    if (currentPage > 3) pageNumbers.push("...");
+  }
+
+  // Add the current page and one page before and after if possible
+  const startPage = Math.max(1, currentPage - 1);
+  const endPage = Math.min(totalPages, currentPage + 1);
+
+  for (let i = startPage; i <= endPage; i++) {
+    if (!pageNumbers.includes(i)) pageNumbers.push(i);
+  }
+
+  if (currentPage < totalPages - 1) {
+    // Add ellipsis and last page if needed
+    if (currentPage < totalPages - 2) pageNumbers.push("...");
+    pageNumbers.push(totalPages);
+  }
+
+  // Add page buttons
+  pageNumbers.forEach((page) => {
+    const pageBtn = document.createElement("button");
+    pageBtn.textContent = page;
+    pageBtn.disabled = page === "...";
+    pageBtn.classList.toggle("disabled", currentPage === page);
+    if (page !== "...") {
+      pageBtn.addEventListener("click", () => changePage(page));
+    }
+    paginationContainer.appendChild(pageBtn);
+  });
+
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Next";
+  nextBtn.classList.toggle("disabled", currentPage === totalPages);
+  nextBtn.addEventListener("click", () => changePage(currentPage + 1));
+  paginationContainer.appendChild(nextBtn);
+}
+
+function changePage(page) {
+  const totalPages = Math.ceil(images.length / imagesPerPage);
+  if (page < 1 || page > totalPages) return; // Prevent out of range
+  currentPage = page;
+  displayImages();
+}
+
+// Close lightbox on clicking the close button
+closeBtn.addEventListener("click", () => {
+  lightbox.classList.add("hidden");
+});
+
+// Close lightbox when clicking outside the image
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    lightbox.classList.add("hidden");
+  }
+});
+
+// Lightbox navigation (Prev/Next)
+let currentImageIndex = 0;
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
+
+prevButton.addEventListener("click", () => navigateLightbox(-1));
+nextButton.addEventListener("click", () => navigateLightbox(1));
+
+function navigateLightbox(direction) {
+  currentImageIndex =
+    (currentImageIndex + direction + images.length) % images.length;
+  const lightboxImagePath = `${folderPath}cervical_cancer_img${
+    totalImages - currentImageIndex
+  }.jpg`; // Adjust for descending order
+  lightboxImg.src = lightboxImagePath; // Change the lightbox image
+  lightboxImg.alt = `Cervical Cancer Image ${
+    totalImages - currentImageIndex
+  }`;
+  lightboxImg.title = `Cervical Cancer Image ${
+    totalImages - currentImageIndex
+  }`;
+}
+
+// Initial page load
+displayImages();
+</script>
+<script src="../assets/scripts/script.js"></script>
+<script src="../assets/scripts/odometer.min.js"></script>
 </body>
 </html>
