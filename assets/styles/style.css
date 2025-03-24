@@ -1170,6 +1170,11 @@ a.bread_active{
     background-color: #ccc;
     cursor: not-allowed;
 }
+
+.table-responsive {
+    min-height: 0.01%;
+    overflow-x: auto;
+  }
   
   
 /* Resposive Screens */
@@ -1256,6 +1261,9 @@ a.bread_active{
     }
     .proj_bread_image{
         background-position: 0 -75px;
+    }
+    .pd_img {
+        width: 45%;
     }
 }
 
@@ -1399,6 +1407,9 @@ a.bread_active{
     }
     .proj_bread_image{
         background-position: 0 -50px;
+    }
+    .pd_img {
+        width: 50%;
     }
 }
 
@@ -1749,6 +1760,13 @@ a.bread_active{
     }
     .proj_bread_image{
         background-position: 0;
+    }
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
     }
 }
 
