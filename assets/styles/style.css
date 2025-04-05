@@ -978,11 +978,14 @@ a.bread_active{
 }
 
 .pd_img{
+    text-align: center;
     width: 30%;
 }
 
 .pd_card{
-    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
     gap: 30px;
 }
@@ -996,6 +999,12 @@ a.bread_active{
 .table_text{
     font-weight: bold;
 }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
 
 /* .pd_overview {
 
@@ -1154,6 +1163,7 @@ a.bread_active{
     cursor: not-allowed;
 }
 
+
 /* Responsive Adjustments */
 @media (max-width: 992px) {
     .image-grid {
@@ -1179,10 +1189,7 @@ a.bread_active{
     }
   }
 
-.table-responsive {
-    min-height: 0.01%;
-    overflow-x: auto; 
-  }
+
   
   
 /* Resposive Screens */
@@ -1584,6 +1591,9 @@ a.bread_active{
     .proj_bread_image{
         background-position: 0 -20px;
     }
+    .pd_card{
+        display: block;
+    }
 }
 
 @media screen and (max-width: 480px){
@@ -1769,13 +1779,7 @@ a.bread_active{
     .proj_bread_image{
         background-position: 0;
     }
-    .table-responsive {
-        width: 100%;
-        margin-bottom: 15px;
-        overflow-y: hidden;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        border: 1px solid #ddd;
-    }
+
 }
 
 @media screen and (max-width: 320px){
