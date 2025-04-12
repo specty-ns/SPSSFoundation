@@ -1009,6 +1009,16 @@ table {
 /* .pd_overview {
 
 } */
+
+/*  others */
+.four0four{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
 /* Resposive Screens */
 
 /* Pagination */
