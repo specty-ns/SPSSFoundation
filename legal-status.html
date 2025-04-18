@@ -43,53 +43,52 @@
                             <div class="dropitem"><a href="area-of-work.html" onclick="navigateToSection('community-prosperity')">Community Prosperity</a></div>
                         </div>
                     </li>
-                    <li class="nav_extend"><a class="nav_link" href="projects.html">
-                            <i class="mobile_angle fa-solid fa-angle-down"></i> Projects <i
-                                class="pc_angle fa-solid fa-angle-down"></i></a>
-                        <div id="nav_drop3" class="nav_drop">
-                            <div class="dropitem"><a href="#">Ongoing Projects</a></div>
-                            <div class="dropitem"><a href="#">Completed Projects</a></div>
-                            <div class="dropitem"><a href="#">Covid-19 Relief Work</a></div>
-                        </div>
-                    </li>
-                    <li class="nav_extend"><a class="nav_link" href="media.html">
-                            <i class="mobile_angle fa-solid fa-angle-down"></i> Media <i
-                                class="pc_angle fa-solid fa-angle-down"></i></a>
-                        <div id="nav_drop4" class="nav_drop">
-                            <div class="dropitem"><a href="#">Photos</a></div>
-                            <div class="dropitem"><a href="#">Videos</a></div>
-                            <div class="dropitem"><a href="#">News</a></div>
-                        </div>
-                    </li>
-                    <li class="nav_extend"><a class="nav_link" href="get-involved.html">
-                            <i class="mobile_angle fa-solid fa-angle-down"></i> Get Involved <i
-                                class="pc_angle fa-solid fa-angle-down"></i></a>
-                        <div id="nav_drop5" class="nav_drop">
-                            <div class="dropitem"><a href="#">Volunteers </a></div>
-                            <div class="dropitem"><a href="#">Internship</a></div>
-                            <div class="dropitem"><a href="#">Corporate & NGO</a></div>
-                        </div>
-                    </li>
-                    <li class="nav_extend"><a class="active nav_link" href="legal-status.html">
+                    <li class="nav_extend"><a class="nav_link">
+                        <i class="mobile_angle fa-solid fa-angle-down"></i> Projects <i
+                            class="pc_angle fa-solid fa-angle-down"></i></a>
+                    <div id="nav_drop3" class="nav_drop">
+                        <div class="dropitem"><a href="projects.html" onclick="navigateToSection('on_project')">Ongoing Projects</a></div>
+                        <div class="dropitem"><a href="projects.html" onclick="navigateToSection('comp_project')">Completed Projects</a></div>
+                        <div class="dropitem"><a href="projects.html" onclick="navigateToSection('covid_project')">Covid-19 Relief Work</a></div>
+                    </div>
+                </li>
+                <li class="nav_extend"><a class="nav_link">
+                    <i class="mobile_angle fa-solid fa-angle-down"></i> Media <i
+                        class="pc_angle fa-solid fa-angle-down"></i></a>
+                <div id="nav_drop4" class="nav_drop">
+                    <div class="dropitem"><a href="media.html" onclick="navigateToSection('photos')">Photos</a></div>
+                    <div class="dropitem"><a href="media.html" onclick="navigateToSection('videos')">Videos</a></div>
+                    <div class="dropitem"><a href="media.html" onclick="navigateToSection('news')">News</a></div>
+                </div>
+            </li>
+            <li class="nav_extend"><a class="nav_link">
+                <i class="mobile_angle fa-solid fa-angle-down"></i> Get Involved <i
+                    class="pc_angle fa-solid fa-angle-down"></i></a>
+            <div id="nav_drop5" class="nav_drop">
+                <div class="dropitem"><a href="get-involved.html" onclick="navigateToSection('vi')">Volunteers & Interns </a></div>
+                <div class="dropitem"><a href="get-involved.html" onclick="navigateToSection('csr')">Corporate & NGO</a></div>
+            </div>
+        </li>
+                    <li class="nav_extend"><a class="active nav_link">
                             <i class="mobile_angle fa-solid fa-angle-down"></i> Legal Status <i
                                 class="pc_angle fa-solid fa-angle-down"></i></a>
                         <div id="nav_drop6" class="nav_drop">
-                            <div class="dropitem"><a href="#">Annual Report </a></div>
-                            <div class="dropitem"><a href="#">Audit Report</a></div>
-                            <div class="dropitem"><a href="#">Organisation Profile</a></div>
-                            <div class="dropitem"><a href="#">Awards & Recogntion</a></div>
+                            <div class="dropitem"><a  href="legal-status.html#annual_reports">Annual Report </a></div>
+                            <div class="dropitem"><a href="legal-status.html#audit_reports">Audit Report</a></div>
+                            <div class="dropitem"><a href="legal-status.html#org_profile">Organisation Profile</a></div>
+                            <div class="dropitem"><a href="legal-status.html#awards">Awards & Recogntion</a></div>
                         </div>
                     </li>
-                    <li class="nav_extend"><a class="nav_link" href="contact-us.html">
-                            <i class="mobile_angle fa-solid fa-angle-down"></i> Contact <i
-                                class="pc_angle fa-solid fa-angle-down"></i></a>
-                        <div id="nav_drop7" class="nav_drop">
-                            <div class="dropitem"><a href="#">Register Office Address</a></div>
-                            <div class="dropitem"><a href="#">Communication Address</a></div>
-                        </div>
-                    </li>
+                    <li class="nav_extend"><a class="nav_link">
+                        <i class="mobile_angle fa-solid fa-angle-down"></i> Contact <i
+                            class="pc_angle fa-solid fa-angle-down"></i></a>
+                    <div id="nav_drop7" class="nav_drop">
+                        <div class="dropitem"><a href="contact-us.html" onclick="navigateToSection('registered_office')">Register Office Address</a></div>
+                        <div class="dropitem"><a href="contact-us.html" onclick="navigateToSection('head_office')">Head Office Address</a></div>
+                    </div>
+                </li>
                 </ul>
-                <a href="#" class="donate_btn"><img src="./assets/images/Donate_svg.svg" alt="Donate button"> Donate</a>
+                <a href="donate.html" class="donate_btn"><img src="./assets/images/Donate_svg.svg" alt="Donate button"> Donate</a>
             </nav>
             <div id="menu_btn" class="menu_btn">
                 <div class="bar1"></div>
@@ -123,7 +122,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="legal_status">
             <div class="about_sec pd_sec">
                 <div class="about_welcome">
                     <div class="welcome_sec">
@@ -140,7 +139,7 @@
                                     <div class="work_head pd_head">
                                         <h3>Registration Details  And Date of Establishment</h3><br>
                                     </div>
-                                    <div class="pd_ table table-responsive">
+                                    <div class="pd_table ">
                                         <table border="1" cellpadding="8" cellspacing="0">
                                             <thead>
                                                 <tr>
@@ -180,7 +179,7 @@
                                     <div class="work_head pd_head">
                                         <h3>Contact Person</h3><br>
                                     </div>
-                                    <div class="pd_ table table-responsive">
+                                    <div class="pd_table ">
                                         <table  border="1" cellpadding="8" cellspacing="0">
                                             <thead>
                                                 <tr>
@@ -211,6 +210,167 @@
                 </div>
             </div>
         </section>
+        <section id="annual_reports">
+            <div class="about_sec overview_sec">
+                <div class="about_welcome">
+                    <div class="welcome_sec">
+                        <div class="wel_head section-transition">
+                            <h3><strong>Annual Reports</strong></h3>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="impact_btn section-transition">
+                    <a target="_blank" href="https://drive.google.com/file/d/1Gg8fMEDkXbt8Q7jDLtZwDqYo2dqEBHfX/view?usp=drive_link" class="knowmore_btn">
+                        2020-21</a><br>
+                    <a target="_blank" href="https://drive.google.com/file/d/1YB8HZOrjkpOc5Af4SQT17QLKEZTfQLXn/view?usp=drive_link" class="donate_btn">
+                        2021-22 </a>
+                    <a target="_blank" href="https://drive.google.com/file/d/18a67mtUUr9v_sp6EkQbx3XaDKKEs1Vat/view?usp=drive_link" class="knowmore_btn">
+                        2022-23 </a><br>
+            </div>
+       
+         </section>
+        <section id="audit_reports">
+            <div class="about_sec overview_sec">
+                <div class="about_welcome">
+                    <div class="welcome_sec">
+                        <div class="wel_head section-transition">
+                            <h3><strong>Audit Reports</strong></h3>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="impact_btn section-transition">
+                    <a target="_blank" href="https://drive.google.com/file/d/1GgKTTGychJg8565UBpqB3jb_eUxUhaPd/view?usp=drive_link" class="knowmore_btn">
+                        2020-21</a><br>
+                    <a target="_blank" href="https://drive.google.com/file/d/10M3EQFwJlD_7TqsJPDMdzt7oc1zTKuGy/view?usp=drive_link" class="donate_btn">
+                        2021-22 </a>
+                    <a target="_blank" href="#" class="knowmore_btn">
+                        2022-23 </a><br>
+            </div>
+       
+         </section>
+        <section id="org_profile">
+            <div class="about_sec overview_sec">
+                <div class="about_welcome">
+                    <div class="welcome_sec">
+                        <div class="wel_head section-transition">
+                            <h3><strong>Organisation Profile </strong></h3>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="impact_btn section-transition">
+                    <a target="_blank" href="https://drive.google.com/file/d/1MpXzEUaJKRbtp1jx02NAYSAi_kYaMvT1/view?usp=drive_link" class="knowmore_btn">
+                       Organisation Profile </a><br>
+            </div>
+       
+         </section>
+        <section id="awards">
+            <div class="about_sec pd_sec">
+                <div class="about_welcome">
+                    <div class="welcome_sec">
+                        <div class="wel_head ">
+                            <h3><strong>Awards & Recognitions</strong></h3>
+                        </div>
+                    </div>
+                    <div class="focus_sec">
+                        <div class="focus_block">
+                            <!-- first work row -->
+                            <div class="impact_card work_card pd_card" style="display: block;">
+                                <div class="pd_text">
+                                <center>
+                                    <div class="work_head pd_head">
+                                        <h3>Awards & Recognitions</h3><br>
+                                    </div>
+                                    <div class="pd_table ">
+                                        <table border="1" cellpadding="8" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sr. No.</th>
+                                                    <th>Date</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td >26 January 2023</td>
+                                                    <td>Appreciation Letter from the State Government of Rajasthan for the Sub-divisional Republic Day Celebration in Deogarh (Block Level Award).</td>
+                                                    
+                                                </tr>                                                
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td >15 August 2024</td>
+                                                    <td>Appreciation Letter from the State Government of Rajasthan for the Sub-divisional Republic Day Celebration in Deogarh (Block Level Award).</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">Before Registration -</td>
+                                                </tr>                                                
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td >26 January 2015</td>
+                                                    <td>Appreciation Letter from the State Government of Rajasthan for the Sub-divisional Republic Day Celebration in Amet (Block Level Award).</td>
+                                                    
+                                                </tr>                                                
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td >30 March 2017</td>
+                                                    <td>Certificate of Outstanding Work from the Sub-divisional Officer in Amet (Block Level Award).</td>
+                                                    
+                                                </tr>                                                
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td >30 March 2018</td>
+                                                    <td>Certificate of Outstanding Work from the Sub-divisional Officer in Amet (Block Level Award).</td>
+                                                    
+                                                </tr>                                                
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td >30 June 2018</td>
+                                                    <td>State Level Smurti Award by Denik Lokmat, Jaipur (State Award).</td>
+                                                    
+                                                </tr>                                                
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td >16 July 2018</td>
+                                                    <td>National Level Award & Certificate of Appreciation in the Inspire Youth category from Y4D Foundation, Delhi (National Award).</td>
+                                                    
+                                                </tr>                                                
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td >12 February 2019</td>
+                                                    <td>Samrasta Award – Gold Medal & Certificate of Appreciation from Indo-Nepal Samrasta Organisation.</td>
+                                                    
+                                                </tr>                                                
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td >15 August 2019</td>
+                                                    <td>Appreciation Letter from the State Government of Rajasthan for the Sub-divisional Republic Day Celebration in Amet (Block Level Award).</td>
+                                                    
+                                                </tr>                                                
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td >30 December 2019</td>
+                                                    <td>Asia Continent Award presented by the Deputy Prime Minister of Nepal and the First President of Nepal on the occasion of the Cultural National Conference of SAARC Member Nations in Kathmandu, Nepal (International Award).</td>
+                                                    
+                                                </tr>                                                
+                                            </tbody>
+                                        </table>
+                                        
+                                    </div>
+                                </center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
     </main>
     <footer>
@@ -222,7 +382,7 @@
                 </div>
                 <div class="foot_expl ">Change a life today, change the world tomorrow.</div>
                 <div class="foot_btns ">
-                    <a href="#" class="donate_btn"><img src="./assets/images/donate_btn.png" alt="Donate button">
+                    <a href="donate.html" class="donate_btn"><img src="./assets/images/donate_btn.png" alt="Donate button">
                         Donate</a>
                     <a href="#" class="knowmore_btn"><img src="./assets/images/knowmore_btn.svg" alt="Knowmore button">
                         know More</a>
@@ -301,5 +461,57 @@
     </footer>
     <script src="./assets/scripts/script.js"></script>
     <script src="./assets/scripts/odometer.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function getNavbarHeight() {
+                const navbar = document.querySelector(".navbar");
+                return navbar ? navbar.offsetHeight : 0;
+            }
+
+            // Check if a section was stored from the previous page
+            const sectionId = sessionStorage.getItem("scrollToSection");
+
+            if (sectionId) {
+                const target = document.getElementById(sectionId);
+                if (target) {
+                    setTimeout(() => {
+                        requestAnimationFrame(() => {
+                            window.scrollTo({
+                                top: target.offsetTop - getNavbarHeight() - 20,
+                                behavior: "smooth"
+                            });
+
+                            // Clear stored section ID after scrolling
+                            sessionStorage.removeItem("scrollToSection");
+                        });
+                    }, 150); // Increased delay for better mobile handling
+                }
+            }
+
+            // Smooth scrolling for internal links
+            document.querySelectorAll('a[href^="legal-status.html#"]').forEach(anchor => {
+                anchor.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href").split("#")[1];
+                    const target = document.getElementById(targetId);
+
+                    if (target) {
+                        requestAnimationFrame(() => {
+                            window.scrollTo({
+                                top: target.offsetTop - getNavbarHeight() - 20,
+                                behavior: "smooth"
+                            });
+
+                            // Remove hash from URL after scrolling
+                            setTimeout(() => {
+                                history.replaceState(null, null, window.location.pathname);
+                            }, 500);
+                        });
+                    }
+                });
+            });
+        });
+
+    </script>
 </body>
 </html>
