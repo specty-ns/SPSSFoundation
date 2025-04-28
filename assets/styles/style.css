@@ -1017,6 +1017,75 @@ table {
     align-items: center;
 }
 
+/* maps */
+
+.map_container{
+    display: flex;
+}
+
+
+.map_text{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.registered_office_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.registered_office_container .team_body{
+    width: 45%;
+}
+
+.registered_office_form {
+    background-color: #f0f8f5;
+    padding: 50px 20px;
+}
+
+.form_data{
+    width: 100%;
+}
+.team_desc {
+    background-color: #ffffff; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 77, 0, 0.2); 
+}
+
+.reg_label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #035C01; 
+    font-size: 16px;
+}
+
+.reg_input {
+    width: -webkit-fill-available;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #035C01; 
+    border-radius: 5px;
+    background-color: #f9fffa;
+    font-size: 15px;
+    color: #333;
+}
+
+.reg_input:focus {
+    border-color: #DB4F04; 
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 102, 0, 0.5);
+}
+
+.form_box {
+    margin-bottom: 20px;
+}
+
+.submit_btn{
+    border: none;
+}
 
 
 /* Resposive Screens */
@@ -1311,6 +1380,16 @@ table {
         gap: 40px;
         flex-direction: column;
     }
+    .registered_office_container {
+        flex-direction: column;
+    }
+    .form_data {
+        width: auto;
+    }
+    .registered_office_container .team_body{
+        width: 100%;
+    }
+
     .nav ul {
         margin-right: 20px;
         gap: 20px;
@@ -1826,6 +1905,18 @@ table {
     .proj_bread_image{
         background-position: 0;
     }
+    .registered_office_form {
+        padding: 0;
+    }
+    .form_box {
+        margin-bottom: 10px;
+    }
+    .team_desc {
+        padding: 20px;
+    }
+    .submit_btn{
+        padding: 6px 12px;
+    }
 
 }
 
@@ -2003,6 +2094,9 @@ table {
     }
     .dnt_box img {
         width: 100%;
+    }
+    .submit_btn{
+        padding: 6px 12px;
     }
 
 }
