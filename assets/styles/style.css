@@ -801,9 +801,13 @@ h3{
     background-position: 0 -100px; /* Position of the image */
     background-image: url(../images/about-us/breadcrumbs.jpg);
 }
+.proj_cervical_bread_image{
+    background-position: 0 -100px; /* Position of the image */
+    background-image: url(../images/projects/health/cervical_cancer/cervical_cancer_img1.jpg);
+}
 
 .page_name h2{
-    margin: 0;
+    margin: 0;  
 }
 
 .page_name, .breadcrumbs, .bread_img{
@@ -1514,6 +1518,9 @@ table {
     .abtus_bread_image {
         background-position: 0 -60px;
     }
+    .proj_cervical_bread_image {
+        background-position: 0 -60px;
+    }
     .team_body{
         gap: 15px;
     }
@@ -1889,6 +1896,9 @@ table {
         font-size: 12px;
     }
     .abtus_bread_image {
+        background-position: 0px;
+    }
+    .proj_cervical_bread_image {
         background-position: 0px;
     }
     .team_box img {
