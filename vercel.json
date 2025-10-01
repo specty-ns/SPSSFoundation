@@ -1,9 +1,3 @@
 {
-  "rewrites": [
-    {
-      "source": "/projects/404",
-      "destination": "/404"
-    }
-  ],
   "cleanUrls": true
 }

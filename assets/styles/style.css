@@ -17,6 +17,11 @@ h4 {
   font-weight: 600;
   color: #035c01;
 }
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #035c01;
+}
 body {
   font-family: "Gabarito", serif;
 }
@@ -818,6 +823,58 @@ h3 {
   background-position: 0 -100px; /* Position of the image */
   background-image: url(../images/projects/health/cervical_cancer/cervical_cancer_img1.jpg);
 }
+.proj_kids_learning_bread_image {
+  background-position: 0 -100px; /* Position of the image */
+  background-image: url(../images/projects/education/kids_learning_center/kids_learning_center_img9.jpg);
+}
+.proj_career_counseling_bread_image {
+  background-position: 0 -100px; /* Position of the image */
+  background-image: url(../images/projects/education/career_counseling/career_counseling_program_img7.jpg);
+}
+.proj_digital_learning_initiative_bread_image {
+  background-position: 0 -100px; /* Position of the image */
+  background-image: url(../images/projects/education/digital_learning_initiative/digital_learning_initiative_img1.jpg);
+}
+.proj_free_health_checkup_camp_bread_image {
+  background-position: 0 -100px; /* Position of the image */
+  background-image: url(../images/projects/health/health_checkup/health_checkup_cover.jpg);
+}
+.proj_menstrual_health_hygiene_management_bread_image {
+  background-position: 0 -100px; /* Position of the image */
+  background-image: url(../images/projects/health/menstrual_hygiene/menstrual_hygiene_img9.jpg);
+}
+.proj_vriksham_bread_image {
+  background-position: 0 -100px; /* Position of the image */
+  background-image: url(../images/projects/environment/vriksham/vriksham_img9.jpg);
+}
+.proj_mission_unnati_bread_image {
+  background-position: 0 -100px; /* Position of the image */
+  background-image: url(../images/projects/community_property/mission_unnati/mission_unnati_img9.jpg);
+}
+.proj_hunar_se_rozgar_tak_bread_image {
+  background-position: 0 -100px; /* Position of the image */
+  background-image: url(../images/projects/women_empowerment/hunar_se_rozgar_tak/hunar_se_rozgar_tak_img6.jpg);
+}
+.proj_volunteer_activities_bread_image {
+  background-position: 0 -100px; /* Position of the image */
+  background-image: url(../images/projects/community_property/volunteer_activities/volunteer_activities_img9.jpg);
+}
+.proj_breast_cancer_bread_image {
+  background-position: 0 -100px; /* Position of the image */
+  background-image: url(../images/projects/health/breast_cancer/breast_cancer_img2.jpg);
+}
+.proj_aayushaman_aadhar_bread_image {
+  background-position: 0 -100px; /* Position of the image */
+  background-image: url(../images/projects/health/aayushaman_aadhar/aayushaman_aadhar_img2.jpg);
+}
+.proj_free_ambulance_service_bread_image {
+  background-position: 0 -100px; /* Position of the image */
+  background-image: url(../images/projects/health/free_ambulance_service/free_ambulance_service_img5.jpg);
+}
+.proj_covid19_relief_bread_image {
+  background-position: 0 -100px; /* Position of the image */
+  background-image: url(../images/projects/community_property/covid19_relief/covid19_relief_cover.jpg);
+}
 
 .page_name h2 {
   margin: 0;
@@ -1106,8 +1163,6 @@ table {
   border: none;
 }
 
-/* Resposive Screens */
-
 /* Pagination */
 /* Grid Layout */
 .image-grid {
@@ -1132,6 +1187,76 @@ table {
 .image-item:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+.video-item iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.video-item:hover iframe {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.youtube-channel {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.channel-link {
+  text-decoration: none;
+}
+
+.channel-card {
+  width: 50%;
+
+  display: flex;
+  align-items: center;
+  /* background-color: #f8f9fa;
+  border: 2px solid #c93448; */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.channel-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.channel-logo {
+  border-radius: 50%; /* Circular logo */
+  margin-right: 15px;
+}
+
+.channel-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.channel-title {
+  margin: 0;
+  font-size: 1.5em;
+  color: #c93448;
+  text-align: center;
+}
+
+.channel-description {
+  margin: 0;
+  color: #555;
+  text-align: center;
 }
 
 .lightbox {
@@ -1255,22 +1380,36 @@ table {
   .image-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .channel-card:hover {
+    transform: translateY(-3px); /* Adjust hover effect for smaller screens */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
 }
 @media (max-width: 768px) {
-  /* .image-grid {
-      grid-template-columns: repeat(2, 1fr);
-    } */
   .pagination {
-    gap: 5px; /* Reduce spacing between buttons */
+    gap: 5px;
   }
 
   .pagination button {
-    font-size: 0.8rem; /* Reduce font size */
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 576px) {
   .image-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .video-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .channel-card:hover {
+    transform: translateY(-3px); /* Adjust hover effect for smaller screens */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  .channel-card {
+    padding: 10px; /* Adjust padding for smaller screens */
   }
 }
 
@@ -1518,6 +1657,45 @@ table {
   .proj_cervical_bread_image {
     background-position: 0 -60px;
   }
+  .proj_kids_learning_bread_image {
+    background-position: 0 -60px;
+  }
+  .proj_career_counseling_bread_image {
+    background-position: 0 -60px;
+  }
+  .proj_digital_learning_initiative_bread_image {
+    background-position: 0 -60px;
+  }
+  .proj_free_health_checkup_camp_bread_image {
+    background-position: 0 -60px;
+  }
+  .proj_menstrual_health_hygiene_management_bread_image {
+    background-position: 0 -60px;
+  }
+  .proj_vriksham_bread_image {
+    background-position: 0 -60px;
+  }
+  .proj_mission_unnati_bread_image {
+    background-position: 0 -60px;
+  }
+  .proj_hunar_se_rozgar_tak_bread_image {
+    background-position: 0 -60px;
+  }
+  .proj_volunteer_activities_bread_image {
+    background-position: 0 -60px;
+  }
+  .proj_breast_cancer_bread_image {
+    background-position: 0 -60px;
+  }
+  .proj_aayushaman_aadhar_bread_image {
+    background-position: 0 -60px;
+  }
+  .proj_free_ambulance_service_bread_image {
+    background-position: 0 -60px;
+  }
+  .proj_covid19_relief_bread_image {
+    background-position: 0 -60px;
+  }
   .team_body {
     gap: 15px;
   }
@@ -1698,6 +1876,9 @@ table {
   }
   .team_box {
     width: auto;
+  }
+  .team_box img {
+    width: 25%;
   }
   .team_desc .team_name,
   .team_desc .team_text {
@@ -1907,6 +2088,46 @@ table {
   .proj_cervical_bread_image {
     background-position: 0px;
   }
+  .proj_kids_learning_bread_image {
+    background-position: 0px;
+  }
+  .proj_career_counseling_bread_image {
+    background-position: 0px;
+  }
+  .proj_digital_learning_initiative_bread_image {
+    background-position: 0px;
+  }
+  .proj_free_health_checkup_camp_bread_image {
+    background-position: 0px;
+  }
+  .proj_menstrual_health_hygiene_management_bread_image {
+    background-position: 0px;
+  }
+  .proj_vriksham_bread_image {
+    background-position: 0px;
+  }
+  .proj_mission_unnati_bread_image {
+    background-position: 0px;
+  }
+  .proj_hunar_se_rozgar_tak_bread_image {
+    background-position: 0px;
+  }
+  .proj_volunteer_activities_bread_image {
+    background-position: 0px;
+  }
+  .proj_breast_cancer_bread_image {
+    background-position: 0px;
+  }
+  .proj_aayushaman_aadhar_bread_image {
+    background-position: 0px;
+  }
+  .proj_free_ambulance_service_bread_image {
+    background-position: 0px;
+  }
+  .proj_covid19_relief_bread_image {
+    background-position: 0px;
+  }
+
   .team_box {
     flex-direction: column;
     align-items: center;

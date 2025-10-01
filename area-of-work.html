@@ -54,7 +54,9 @@
             "sameAs": [
                 "https://www.facebook.com/spssfoundation",
                 "https://www.instagram.com/spssfoundation",
-                "https://www.linkedin.com/company/spssfoundation"
+                "https://www.linkedin.com/company/spssfoundation",
+                "https://www.youtube.com/@spssfoundation",
+                "https://x.com/spssfoundation"
             ],
             "knowsAbout": [
                 "Education",
@@ -71,7 +73,7 @@
     <header>
         <div class="navbar">
             <div class="logo"><a href="./">
-                    <img src="./assets/images/logo_main.png" alt="SP Seva Sansthan Foundation" width="100%">
+                    <img src="./assets/images/logo_main.png" alt="SP Seva Sansthan Foundation" title="SP Seva Sansthan Foundation Logo" width="100%">
                 </a>
             </div>
             <nav id="nav" class="nav">
@@ -145,7 +147,7 @@
     </div>
 </li>
                 </ul>
-                <a href="donate.html" class="donate_btn"><img src="./assets/images/Donate_svg.svg" alt="Donate button"> Donate</a>
+                <a href="donate.html" class="donate_btn"><img src="./assets/images/Donate_svg.svg" alt="Donate button" title="Donate button"> Donate</a>
             </nav>
             <div id="menu_btn" class="menu_btn">
                 <div class="bar1"></div>
@@ -1250,7 +1252,7 @@
                 <div class="foot_btns ">
                     <a href="donate.html" class="donate_btn"><img src="./assets/images/donate_btn.png" alt="Donate button">
                         Donate</a>
-                    <a href="#" class="knowmore_btn"><img src="./assets/images/knowmore_btn.svg" alt="Knowmore button">
+                    <a href="about-us.html" class="knowmore_btn"><img src="./assets/images/knowmore_btn.svg" alt="Knowmore button">
                         know More</a>
                 </div>
             </div>
@@ -1285,7 +1287,8 @@
                                     class="fa-brands fa-facebook"></i></a>
                             <a href="https://www.instagram.com/spssfoundation/" target="_blank"><i
                                     class="fa-brands fa-square-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                            <a href="https://x.com/spssfoundation/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                            <a href="https://www.youtube.com/@spssfoundation/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                             <a href="https://www.linkedin.com/company/spssfoundation/" target="_blank"><i
                                     class="fa-brands fa-linkedin"></i></a>
                         </div>
@@ -1307,7 +1310,7 @@
                 <div class="foot_news">
                     <div class="fcont_head">Newsletter</div>
                     <div class="sign_text">Sign up for newsletter and stay up-to date about our work.</div>
-                    <form action="#" name="news_form" method="get">
+                    <form name="news_form" method="get">
                         <div class="sign_form">
                             <input type="text" placeholder="Enter Your Email Address" name="email" id="email">
                             <button class="form_sub" type="submit">Subscribe</button>
@@ -1332,7 +1335,7 @@
                 return navbar ? navbar.offsetHeight : 0;
             }
 
-            // Check if a section was stored from the previous page
+            
             const sectionId = sessionStorage.getItem("scrollToSection");
 
             if (sectionId) {
@@ -1345,14 +1348,14 @@
                                 behavior: "smooth"
                             });
 
-                            // Clear stored section ID after scrolling
+                            
                             sessionStorage.removeItem("scrollToSection");
                         });
-                    }, 150); // Increased delay for better mobile handling
+                    }, 150); 
                 }
             }
 
-            // Smooth scrolling for internal links
+            
             document.querySelectorAll('a[href^="area-of-work.html#"]').forEach(anchor => {
                 anchor.addEventListener("click", function (event) {
                     event.preventDefault();
@@ -1366,7 +1369,7 @@
                                 behavior: "smooth"
                             });
 
-                            // Remove hash from URL after scrolling
+                            
                             setTimeout(() => {
                                 history.replaceState(null, null, window.location.pathname);
                             }, 500);

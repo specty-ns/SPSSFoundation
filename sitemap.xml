@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    <url>
+     <url>
         <loc>https://spssfoundation.org/</loc>
         <lastmod>2025-10-01T18:50:55+05:30</lastmod>
         <priority>1.00</priority>
@@ -8,41 +8,112 @@
     <url>
         <loc>https://spssfoundation.org/about-us</loc>
         <lastmod>2025-10-01T18:52:55+05:30</lastmod>
-        <priority>0.80</priority>
+        <priority>1.00</priority>
     </url>
     <url>
         <loc>https://spssfoundation.org/area-of-work</loc>
-        <lastmod>2025-04-30T08:34:18+05:30</lastmod>
+        <lastmod>2025-05-06T08:34:18+05:30</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://spssfoundation.org/projects</loc>
-        <lastmod>2025-04-30T08:34:18+05:30</lastmod>
+        <lastmod>2025-05-06T08:34:18+05:30</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://spssfoundation.org/media</loc>
-        <lastmod>2025-04-30T08:34:18+05:30</lastmod>
+        <lastmod>2025-05-06T08:34:18+05:30</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://spssfoundation.org/get-involved</loc>
-        <lastmod>2025-04-30T08:34:18+05:30</lastmod>
+        <lastmod>2025-05-06T08:34:18+05:30</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://spssfoundation.org/legal-status</loc>
-        <lastmod>2025-04-30T08:34:18+05:30</lastmod>
+        <lastmod>2025-05-06T08:34:18+05:30</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://spssfoundation.org/contact-us</loc>
-        <lastmod>2025-04-30T08:34:19+05:30</lastmod>
+        <lastmod>2025-05-06T08:34:19+05:30</lastmod>
         <priority>0.90</priority>
     </url>
     <url>
         <loc>https://spssfoundation.org/donate</loc>
-        <lastmod>2025-04-30T08:34:19+05:30</lastmod>
+        <lastmod>2025-05-06T08:34:19+05:30</lastmod>
         <priority>0.90</priority>
+    </url>
+    <!--Project details-->
+    <url>
+        <loc>https://spssfoundation.org/projects/cervical-cancer-at-phcs</loc>
+        <lastmod>2025-05-06T19:03:19+05:30</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://spssfoundation.org/projects/kids-learning-center</loc>
+        <lastmod>2025-05-06T20:50:14+05:30</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://spssfoundation.org/projects/career-counselling-program</loc>
+        <lastmod>2025-05-06T15:50:12+05:30</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://spssfoundation.org/projects/digital-learning-initiative</loc>
+        <lastmod>2025-05-06T18:30:36+05:30</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://spssfoundation.org/projects/free-health-checkup-camp</loc>
+        <lastmod>2025-05-06T20:05:15+05:30</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://spssfoundation.org/projects/menstrual-health-hygiene-management</loc>
+        <lastmod>2025-05-06T22:49:15+05:30</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://spssfoundation.org/projects/vriksham-tree-plantation</loc>
+        <lastmod>2025-05-06T18:30:45+05:30</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://spssfoundation.org/projects/mission-unnati</loc>
+        <lastmod>2025-05-06T23:29:05+05:30</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://spssfoundation.org/projects/volunteer-activities</loc>
+        <lastmod>2025-05-06T17:55:55+05:30</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://spssfoundation.org/projects/hunar-se-rozgar-tak</loc>
+        <lastmod>2025-05-07T22:55:55+05:30</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://spssfoundation.org/projects/breast-cancer</loc>
+        <lastmod>2025-05-08T17:45:25+05:30</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://spssfoundation.org/projects/aayushaman-aadhar</loc>
+        <lastmod>2025-05-10T16:30:05+05:30</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://spssfoundation.org/projects/free-ambulance-service</loc>
+        <lastmod>2025-05-10T16:30:05+05:30</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://spssfoundation.org/projects/covid-19-relief-work</loc>
+        <lastmod>2025-05-11T17:30:55+05:30</lastmod>
+        <priority>0.75</priority>
     </url>
 </urlset>

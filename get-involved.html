@@ -35,7 +35,7 @@
     <header>
         <div class="navbar">
             <div class="logo"><a href="./">
-                    <img src="./assets/images/logo_main.png" alt="SP Seva Sansthan Foundation" width="100%">
+                    <img src="./assets/images/logo_main.png" alt="SP Seva Sansthan Foundation" title="SP Seva Sansthan Foundation Logo" width="100%">
                 </a>
             </div>
             <nav id="nav" class="nav">
@@ -109,7 +109,7 @@
                 </div>
             </li>
                 </ul>
-                <a href="donate.html" class="donate_btn"><img src="./assets/images/Donate_svg.svg" alt="Donate button"> Donate</a>
+                <a href="donate.html" class="donate_btn"><img src="./assets/images/Donate_svg.svg" alt="Donate button" title="Donate button"> Donate</a>
             </nav>
             <div id="menu_btn" class="menu_btn">
                 <div class="bar1"></div>
@@ -292,31 +292,31 @@
                                     Empowering women through education, skills training, and socio-economic support to promote gender equality
                                 </li>
                                 <li style="padding: 10px 0px; text-align: start;">
-                                    <strong>SDG 6: Decent Work and Economic Growth:</strong> 
+                                    <strong>SDG 8: Decent Work and Economic Growth:</strong> 
                                     Promoting economic growth and job creation through livelihood and entrepreneurship programs.
                                 </li>
                                 <li style="padding: 10px 0px; text-align: start;">
-                                    <strong>SDG 7: Reduced Inequality:</strong> 
+                                    <strong>SDG 10: Reduced Inequality:</strong> 
                                     Working to reduce inequalities within communities through inclusive development and equal opportunities for all.
                                 </li>
                                 <li style="padding: 10px 0px; text-align: start;">
-                                    <strong>SDG 8: Sustainable Cities and Communities:</strong> 
+                                    <strong>SDG 11: Sustainable Cities and Communities:</strong> 
                                     Contributing to the creation of resilient, sustainable communities through rural development, infrastructure projects, and climate action.
                                 </li>
                                 <li style="padding: 10px 0px; text-align: start;">
-                                    <strong>SDG 9: Responsible Consumption and Production:</strong> 
+                                    <strong>SDG 12: Responsible Consumption and Production:</strong> 
                                     Encouraging sustainable practices and responsible consumption through environmental conservation efforts, such as tree planting and waste management.
                                 </li>
                                 <li style="padding: 10px 0px; text-align: start;">
-                                    <strong>SDG 10: Climate Action:</strong> 
+                                    <strong>SDG 13: Climate Action:</strong> 
                                     Addressing climate change through initiatives that promote environmental sustainability and support eco-friendly practices.
                                 </li>
                                 <li style="padding: 10px 0px; text-align: start;">
-                                    <strong>SDG 11: Life on Land:</strong> 
+                                    <strong>SDG 15: Life on Land:</strong> 
                                     Protecting terrestrial ecosystems and biodiversity through tree-planting campaigns and environmental conservation.
                                 </li>
                                 <li style="padding: 10px 0px; text-align: start;">
-                                    <strong>SDG 12: Partnerships for the Goals:</strong> 
+                                    <strong>SDG 17: Partnerships for the Goals:</strong> 
                                     Collaborating with corporates, government bodies, and local organizations to strengthen partnerships and achieve sustainable development goals together.
                                 </li>
                             </ol>
@@ -365,7 +365,8 @@
                 </div>
             </div>
          </section>
-       
+         <button onclick="topFunction()" id="scrollToTop" title="Scroll To Top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
     </main>
     <footer>
         <div class="footer_sec">
@@ -378,7 +379,7 @@
                 <div class="foot_btns ">
                     <a href="donate.html" class="donate_btn"><img src="./assets/images/donate_btn.png" alt="Donate button">
                         Donate</a>
-                    <a href="#" class="knowmore_btn"><img src="./assets/images/knowmore_btn.svg" alt="Knowmore button">
+                    <a href="about-us.html" class="knowmore_btn"><img src="./assets/images/knowmore_btn.svg" alt="Knowmore button">
                         know More</a>
                 </div>
             </div>
@@ -413,7 +414,8 @@
                                     class="fa-brands fa-facebook"></i></a>
                             <a href="https://www.instagram.com/spssfoundation/" target="_blank"><i
                                     class="fa-brands fa-square-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                            <a href="https://x.com/spssfoundation/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                            <a href="https://www.youtube.com/@spssfoundation/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                             <a href="https://www.linkedin.com/company/spssfoundation/" target="_blank"><i
                                     class="fa-brands fa-linkedin"></i></a>
                         </div>
@@ -435,7 +437,7 @@
                 <div class="foot_news">
                     <div class="fcont_head">Newsletter</div>
                     <div class="sign_text">Sign up for newsletter and stay up-to date about our work.</div>
-                    <form action="#" name="news_form" method="get">
+                    <form name="news_form" method="get">
                         <div class="sign_form">
                             <input type="text" placeholder="Enter Your Email Address" name="email" id="email">
                             <button class="form_sub" type="submit">Subscribe</button>
@@ -462,7 +464,7 @@
                 return navbar ? navbar.offsetHeight : 0;
             }
 
-            // Check if a section was stored from the previous page
+            
             const sectionId = sessionStorage.getItem("scrollToSection");
 
             if (sectionId) {
@@ -475,14 +477,14 @@
                                 behavior: "smooth"
                             });
 
-                            // Clear stored section ID after scrolling
+                            
                             sessionStorage.removeItem("scrollToSection");
                         });
-                    }, 150); // Increased delay for better mobile handling
+                    }, 150); 
                 }
             }
 
-            // Smooth scrolling for internal links
+            
             document.querySelectorAll('a[href^="get-involved.html#"]').forEach(anchor => {
                 anchor.addEventListener("click", function (event) {
                     event.preventDefault();
@@ -496,7 +498,7 @@
                                 behavior: "smooth"
                             });
 
-                            // Remove hash from URL after scrolling
+                            
                             setTimeout(() => {
                                 history.replaceState(null, null, window.location.pathname);
                             }, 500);
