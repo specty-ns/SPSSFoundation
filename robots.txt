@@ -4,6 +4,6 @@ Disallow: /404.html
 Sitemap: https://spssfoundation.org/sitemap.xml
 
 
-# Other pages or directories you want to disallow can be added here:
+# Other pages or directories to disallow can be added here:
 # Disallow: /private-directory/
 # Disallow: /path-to-some-page/
